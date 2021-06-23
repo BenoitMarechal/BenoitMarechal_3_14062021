@@ -1,0 +1,80 @@
+.restos{
+    display: flex;
+    flex-direction: column;
+flex-wrap: nowrap;
+align-items: center;
+justify-content: center;
+}
+
+.vignette{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+width: auto;
+margin: 0px $marginH 15px $marginH;
+height: auto;
+border: blanchedalmond 1px solid;
+position: relative;
+padding: $vignpadding;
+background: $colour-white;
+border-radius: $vignradius;
+@include shadow;
+
+
+&__nouveau{
+    width: auto;
+    background: $colour-tertiary;
+    color: darken($color: $colour-tertiary, $amount: 30);    
+    position: absolute;
+    padding: 0.5rem;
+    top: 20px;
+    right: 20px;
+   &__faux{
+       display: none;
+   }
+   }
+
+    
+   
+    
+        
+&__image{
+    //display: none;
+    width: 100%;
+    height: auto;    
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: ($vignradius - $vignpadding) ($vignradius - $vignpadding) 0px 0px;
+
+}
+&__txt{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: space-between;
+    height: 10%;    
+    width: 100%;
+    position: relative;
+    padding: 10px;
+    border-radius:0px 0px ($vignradius - $vignpadding) ($vignradius - $vignpadding);
+    
+    &__nomresto{   
+        width: 100%;
+        font-weight: bold;
+        }
+
+    
+    &__icon{
+        font-size: 1.5rem;
+            
+        width: 20%;
+        text-align: center;
+        position: absolute;
+        right:15px;
+        top: 15px;    
+    }
+}
+
+}

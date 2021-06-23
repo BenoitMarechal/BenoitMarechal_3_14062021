@@ -1,0 +1,39 @@
+/*FONTS*/
+@font-face {
+  font-family: "Shrikhand";
+  src: url("../../polices/Shrikhand-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../polices/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: 'Roboto', Arial;
+  
+}
+
+a{
+  text-decoration: none;
+  color: unset;
+}
+
+h1, h3 {
+  font-family: 'Shrikhand', 'Roboto', Arial;
+}
+
+h3{
+  font-weight: normal;
+  margin-left: $marginH;
+}
+
+h2{
+  font-weight: bold;  
+  margin-left: $marginH;
+  margin-top: 0px;
+}
+
+/*END FONTS*/

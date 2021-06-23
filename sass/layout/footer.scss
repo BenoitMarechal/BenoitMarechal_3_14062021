@@ -1,0 +1,14 @@
+.foot{
+    background: $colour-footer;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: auto;
+    color:$colour-white;
+    font-weight: normal;
+    padding-bottom: 20px;
+    &__link{
+        margin-left: $marginH;
+        margin-bottom: 15px;
+    }
+    }

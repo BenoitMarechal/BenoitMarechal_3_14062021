@@ -1,0 +1,11 @@
+.btn-rond{
+    @include btn-rond;
+    padding: 1rem;
+    @include vertical-spacing-20;
+}
+
+.btn-nav{
+   @include btn-nav;
+   @include shadow;
+
+}
