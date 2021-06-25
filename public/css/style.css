@@ -116,6 +116,7 @@ nav {
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
+  margin: 0px 15px 15px 15px;
 }
 
 .vignette {
@@ -124,12 +125,10 @@ nav {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  width: auto;
+  width: 100%;
   margin: 0px 15px 15px 15px;
   height: auto;
-  border: blanchedalmond 1px solid;
   position: relative;
-  padding: 5px;
   background: #fff;
   border-radius: 30px;
   box-shadow: 2px 2px 10px -2px #303030;
@@ -147,11 +146,14 @@ nav {
   display: none;
 }
 .vignette__image {
+  will-change: auto;
+  display: flex;
   width: 100%;
-  height: auto;
+  height: 100%;
   max-height: 200px;
+  max-width: unset;
   object-fit: cover;
-  border-radius: 25px 25px 0px 0px;
+  border-radius: 30px 30px 0px 0px;
 }
 .vignette__txt {
   display: flex;

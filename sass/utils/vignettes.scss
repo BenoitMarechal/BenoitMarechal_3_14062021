@@ -4,6 +4,7 @@
 flex-wrap: nowrap;
 align-items: center;
 justify-content: center;
+margin: 0px $marginH 15px $marginH;
 }
 
 .vignette{
@@ -12,12 +13,12 @@ flex-direction: row;
 flex-wrap: wrap;
 align-items: center;
 justify-content: center;
-width: auto;
+width: 100%;
 margin: 0px $marginH 15px $marginH;
 height: auto;
-border: blanchedalmond 1px solid;
+//border: blanchedalmond 1px solid;
 position: relative;
-padding: $vignpadding;
+//padding: $vignpadding;
 background: $colour-white;
 border-radius: $vignradius;
 @include shadow;
@@ -41,12 +42,14 @@ border-radius: $vignradius;
     
         
 &__image{
-    //display: none;
+    will-change: auto;
+    display: flex;
     width: 100%;
-    height: auto;    
+    height: 100%;    
     max-height: 200px;
+    max-width: unset;
     object-fit: cover;
-    border-radius: ($vignradius - $vignpadding) ($vignradius - $vignpadding) 0px 0px;
+    border-radius: $vignradius $vignradius 0px 0px;
 
 }
 &__txt{
