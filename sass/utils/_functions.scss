@@ -1,11 +1,8 @@
 
-/*
-@function txtcolor ($colour-font)
-{
+@function colorcomp($colour){
     
-    @if {background= $colour-primary}
-    $color=$colour-white;
-    @else 
-    $color:$colour-black;
-}
-*/
+    $comp:adjust-hue($colour, 60deg);
+
+    @return $comp;
+    
+  }

@@ -3,11 +3,24 @@
 }
 
 @mixin btn-rond{
-    background: $colour-primary; /*voir comment faire dégradé*/
     width: auto;
     color: white; /*faire fonction noir/blanc*/
     border-radius: 50rem;
 }
+
+
+
+@mixin lingrad1{
+    background: linear-gradient($colour-secondary,$colour-primary );      
+    }
+
+@mixin lingrad-like{
+    background: -webkit-linear-gradient($colour-primary, $colour-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+
+
 
 @mixin btn-nav{
     display: flex;
@@ -58,6 +71,7 @@
     position: absolute;
     left:-13px;
     margin: 0px;
+    background: $colour-primary;
 }
 
 @mixin shadow{
