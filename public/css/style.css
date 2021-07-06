@@ -45,6 +45,10 @@ h2 {
   font-weight: bold;
 }
 
+.restos__vignette__label__txt__name {
+  font-weight: 900;
+}
+
 /*END FONTS*/
 .header {
   display: flex;
@@ -118,41 +122,40 @@ footer {
 }
 
 /*
-<main class="background">
-    <h2>Restaurants</h2>
-        <section class="restos">
-            <article class="restos__vignette">
-                <a href="">
-                        <img src="images\restaurants\jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût" class=restos__vignette__image>
+<article class="restos__vignette">
+                    <a href="">
                         <div class="restos__vignette__nouveau restos__vignette__nouveau--1">Nouveau                            
-                        </div>                        
-                        <div class="restos__vignette__label">
-                            <div class="restos__vignette__label__txt">
-                                <div class="restos__vignette__label__txt__name">Ménilmontant</div>
-                                <div class="restos__vignette__label__txt__location">Ménilmontant</div>
-                            </div>                            
-                        </div>                            
-                            <div class="restos__vignette__label__icon">
-                                <div class="restos__vignette__label__icon--empty">
-                                <i class="far fa-heart"></i>
+                        </div> 
+                            <div class="restos__vignette__imgcontainer">
+                            <img class="restos__vignette__imgcontainer__image" src="images\restaurants\jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
+                            </div>
+
+                            <div class="restos__vignette__label">
+                                <div class="restos__vignette__label__txt">
+                                    <div class="restos__vignette__label__txt__name">La palette du goût</div>
+                                    <div class="restos__vignette__label__txt__location">Ménilmontant</div>
+                                </div>                            
+
+                                <div class="restos__vignette__label__icon">
+                                    <div class="restos__vignette__label__icon--empty">
+                                    <i class="far fa-heart"></i>
+                                    </div>
+                                    <div class="restos__vignette__label__icon--full">
+                                    <i class="fas fa-heart"></i>
+                                    </div>  
                                 </div>
-                                <div class="restos__vignette__label__icon--full">
-                                <i class="fas fa-heart"></i>
-                            </div>  
-                        </div>
+
+                            </div>
 
                         </div>
-
-                    </div>
-                </a>
-            </article>                
-
-        </section>
-</main>
-*/
+                    </a>
+                </article>
+                */
 .restos__vignette a {
-  width: auto;
-  height: inherit;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
   margin: 0px;
 }
 
@@ -172,26 +175,33 @@ footer {
   justify-content: flex-start;
   box-shadow: 2px 2px 10px -2px #303030;
   border-radius: 30px;
-  max-height: 250px;
-  max-width: 350px;
+  height: 250px;
+  width: 350px;
 }
 .restos__vignette__nouveau {
   background: #99E2D0;
-  color: #4acbab;
+  color: #32b091;
   padding: 7px;
   display: block;
   width: max-content;
   font-weight: 900;
   position: absolute;
-  right: 15%;
+  right: 5%;
   top: 15%;
 }
-.restos__vignette__image {
+.restos__vignette__imgcontainer {
+  display: flex;
   align-items: center;
   justify-content: center;
-  object-fit: cover;
   width: 100%;
-  height: 50%;
+  height: 75%;
+}
+.restos__vignette__imgcontainer__image {
+  display: flex;
+  object-fit: cover;
+  width: auto;
+  width: 100%;
+  height: 100%;
   border-radius: 30px 30px 0px 0px;
 }
 .restos__vignette__label {
@@ -199,30 +209,28 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid red;
   height: 25%;
+  margin: 0px 20px 0px 15px;
 }
 .restos__vignette__label__txt {
   margin: 0px;
-  border: olive 1px solid;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: auto;
+  justify-content: space-around;
+  height: 100%;
+  margin-left: 15px;
 }
 .restos__vignette__label__icon {
-  font-size: 2rem;
+  font-size: 2.2rem;
   display: flex;
   width: auto;
   height: unset;
-  border: 1px solid blue;
   position: relative;
-  right: 10%;
-  top: 10%;
 }
 .restos__vignette__label__icon--empty {
   color: #CECECE;
-  opacity: 0.5;
+  opacity: 1;
+  z-index: 1;
 }
 .restos__vignette__label__icon--full {
   background: -webkit-linear-gradient(#9356DC, #FF79DA);
@@ -233,107 +241,10 @@ footer {
   bottom: 0px;
   right: 0px;
   left: 0px;
-  opacity: 0.5;
+  opacity: 1;
+  z-index: 0;
 }
 
-/*
-
-.vignette{
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-align-items: center;
-justify-content: center;
-width: 100%;
-margin: 0px $marginH 15px $marginH;
-height: auto;
-//border: blanchedalmond 1px solid;
-position: relative;
-//padding: $vignpadding;
-background: $colour-white;
-border-radius: $vignradius;
-@include shadow;
-
-
-
-
-
-
-
-    &__image{
-        will-change: auto;
-        display: flex;
-        width: 100%;
-        height: 100%;    
-        max-height: 200px;
-        max-width: unset;
-
-        border-radius: $vignradius $vignradius 0px 0px;
-
-    }
-
-    &__txt{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        align-content: space-between;
-        height: 10%;    
-        width: 100%;
-        position: relative;
-        padding: 10px;
-        border-radius:0px 0px ($vignradius - $vignpadding) ($vignradius - $vignpadding);
-
-        &__nomresto{   
-            width: 100%;
-            font-weight: bold;
-            }
-
-
-        &__icon{
-            font-size: 1.5rem;            
-            width: auto;
-            height: auto;
-            text-align: center;
-           position: absolute;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            right:25px;
-            top: 15px;  
-            border: 1px solid blue;
-
-                &--empty {
-
-                    position: absolute;
-                    z-index: 1;
-                    opacity: 1; 
-
-                         }  
-
-
-                &--full {                  
-                @include lingrad-like;
-                position: absolute; 
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                z-index: 0;
-                opacity:1;
-
-
-
-                }
-
-
-
-
-
-
-        }
-
-
-        */
 .btn-rond {
   width: auto;
   color: white;

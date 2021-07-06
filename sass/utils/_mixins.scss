@@ -74,7 +74,7 @@
 
 @mixin nouveau{
     background:$colour-tertiary;
-    color: darken($color: $colour-tertiary, $amount: 20) ;
+    color: darken($color: $colour-tertiary, $amount: 30) ;
     padding: 7px;
     display: block;
     width: max-content;
