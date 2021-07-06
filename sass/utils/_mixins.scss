@@ -8,8 +8,6 @@
     border-radius: 50rem;
 }
 
-
-
 @mixin lingrad1{
     background: linear-gradient($colour-secondary,$colour-primary );      
     }
@@ -19,8 +17,6 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
 }
-
-
 
 @mixin btn-nav{
     display: flex;
@@ -50,8 +46,6 @@
         margin-left: 20px;
         }
 
-
-
     &:active{ 
         background:lighten($color: $colour-primary, $amount: 30);
         :nth-child(2){
@@ -78,7 +72,14 @@
     box-shadow: 2px 2px 10px -2px $colour-footer;
 }
 
-
+@mixin nouveau{
+    background:$colour-tertiary;
+    color: darken($color: $colour-tertiary, $amount: 20) ;
+    padding: 7px;
+    display: block;
+    width: max-content;
+    font-weight: 900;    
+}
 
 @mixin vertical-spacing-20{
     margin-top: 20px;
