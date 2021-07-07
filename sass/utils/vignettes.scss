@@ -2,8 +2,8 @@
 .restos__vignette a{
     display: flex;
     flex-direction: column;
-    width: 100% ;
-    height: 100%;
+    width: $vignwidth;
+    height: $vignheight;
     border-radius: $vignradius;
 }
 
@@ -14,25 +14,29 @@ flex-direction: column;
 flex-wrap: nowrap;
 align-items: center;
 justify-content: center;
+    @include tablet{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
 
     &__vignette{
         display: flex; 
         z-index: 0;
-        position: relative;
+         position: relative;
         flex-direction: column; 
         align-items: center;
         justify-content: flex-start;  
         @include shadow;  
         border-radius: $vignradius;
-        height: $vignheight;
-        width: $vignwidth;        
+       min-width: $vignwidth; 
+        margin: 0px 0px 2*$marginV 0px;  
+            @include tablet{                
+                margin: 0px 5% 2*$marginV 5%;
+            }     
 
-            &__nouveau{
-                @include nouveau;
-                position: absolute;
-                right: 5%;
-                top: 15%;                
-            }
+            
 
             &__imgcontainer{
                 display: flex;
@@ -41,6 +45,18 @@ justify-content: center;
                 width: 100%;
                 height: 75%;
                 border-radius: $vignradius;
+                position: relative;
+                
+
+                &__nouveau{
+                    @include nouveau;
+                    position: absolute;
+                    right: 5%;
+                    top: 15%;
+                    &--0{
+                        display: none;
+                    }                
+                }
                 
                 
                 
@@ -87,7 +103,7 @@ justify-content: center;
                    
                     &:active > &--full{
                         animation-play-state: running;
-                      //  animation-fill-mode: forwards;
+                      
                     }
 
                     &--empty{
@@ -95,7 +111,7 @@ justify-content: center;
                         opacity: 1;
                         z-index: 0;
                         animation: like--empty 200ms 0s paused;
-                       // animation-fill-mode: forwards;
+                       
                          
                     }
                     &--full{

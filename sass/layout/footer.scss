@@ -14,7 +14,7 @@ footer i{
     display:flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    width: auto;
+    width: 100%;
     color:$colour-white;
     font-weight: normal;
     padding-bottom: $marginV;
@@ -31,14 +31,6 @@ footer i{
                     padding-top: $marginV*0.5;            
                     }
             }
-
-
-        
-
-            
-            
-            
-
         &__ul{
                 display: flex;
                 flex-direction: column;
@@ -51,8 +43,6 @@ footer i{
                         width: 100%;
                         justify-content: space-between;
                     }
-            
-
                             &__li{
                             
                                     margin: 0px 0px ($marginV*0.5) 0px; 
@@ -68,6 +58,6 @@ footer i{
                                 }
             }
 
-        }
+}
 
     

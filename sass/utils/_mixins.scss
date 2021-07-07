@@ -96,6 +96,10 @@
 }
 
 @mixin vertical-spacing-20{
-    margin-top: 20px;
+    margin-top: $marginV;
+}
+
+@mixin margin-default{
+    margin: $marginV $marginH $marginV $marginH;
 }
 
