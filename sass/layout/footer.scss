@@ -2,6 +2,12 @@ footer{
     padding: 0px $marginH 0px $marginH;
 }
 
+footer i{
+    margin-right: 10px;
+    width:$marginH ;
+    height: $marginH ;
+}
+
 
 .foot{
     background: $colour-footer;
@@ -11,12 +17,57 @@ footer{
     width: auto;
     color:$colour-white;
     font-weight: normal;
-    padding-bottom: 20px;
+    padding-bottom: $marginV;
+        @include tablet{
+            align-items: center;}
+     
 
-    /*
-    &__link{
-        margin-left: $marginH;
-        margin-bottom: 15px;
-    }
-    */
-    }
+    
+            &__logo{
+                display: flex;
+                    @include tablet{
+                    transform: scale(2.2);
+                    padding-bottom: $marginV*0.5;
+                    padding-top: $marginV*0.5;            
+                    }
+            }
+
+
+        
+
+            
+            
+            
+
+        &__ul{
+                display: flex;
+                flex-direction: column;
+                margin: 0px;
+                padding: 0px;
+                    @include tablet{
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        
+                        width: 100%;
+                        justify-content: space-between;
+                    }
+            
+
+                            &__li{
+                            
+                                    margin: 0px 0px ($marginV*0.5) 0px; 
+                                    list-style-type: none; 
+                                        @include tablet{
+                                            display: flex;
+                                            width: 50%;
+                                            justify-content: center;
+                                            transform: scale(1.5);
+                                            padding-bottom: $marginV;
+                                            }    
+                            
+                                }
+            }
+
+        }
+
+    

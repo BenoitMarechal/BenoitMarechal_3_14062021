@@ -1,4 +1,7 @@
+@charset "UTF-8";
+/*valeurs de marge les plus uitlisées*/
 /*Vignettes resto*/
+/*tailles incones footer*/
 @keyframes like--empty {
   0% {
     opacity: 1;
@@ -52,6 +55,10 @@ body {
 a {
   text-decoration: none;
   color: unset;
+}
+
+address {
+  font-style: normal;
 }
 
 h1, h3 {
@@ -133,6 +140,12 @@ footer {
   padding: 0px 15px 0px 15px;
 }
 
+footer i {
+  margin-right: 10px;
+  width: 15px;
+  height: 15px;
+}
+
 .foot {
   background: #303030;
   display: flex;
@@ -142,12 +155,48 @@ footer {
   color: #fff;
   font-weight: normal;
   padding-bottom: 20px;
-  /*
-  &__link{
-      margin-left: $marginH;
-      margin-bottom: 15px;
+}
+@media screen and (min-width: 801px) {
+  .foot {
+    align-items: center;
   }
-  */
+}
+.foot__logo {
+  display: flex;
+}
+@media screen and (min-width: 801px) {
+  .foot__logo {
+    transform: scale(2.2);
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+}
+.foot__ul {
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  padding: 0px;
+}
+@media screen and (min-width: 801px) {
+  .foot__ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+.foot__ul__li {
+  margin: 0px 0px 10px 0px;
+  list-style-type: none;
+}
+@media screen and (min-width: 801px) {
+  .foot__ul__li {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    transform: scale(1.5);
+    padding-bottom: 20px;
+  }
 }
 
 .restos__vignette a {
