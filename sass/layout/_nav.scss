@@ -3,5 +3,14 @@ nav{
     width: auto;
     padding-bottom: 20px;
     margin: 0px $marginH 0px $marginH;
-    
 }
+
+    .nav__btncontainer{
+        @include tablet{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    }    
+    
+

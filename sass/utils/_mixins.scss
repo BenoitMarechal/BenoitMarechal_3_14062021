@@ -1,5 +1,10 @@
 @mixin mobile {
-    @media screen and (max-width: 1280px){@content;}    
+    @media screen and (max-width: 800px){@content;}    
+}
+
+@mixin tablet {
+    @media screen and (min-width: 801px){@content;}   
+
 }
 
 @mixin btn-rond{
@@ -43,7 +48,11 @@
         }
     
     &__txt{
-        margin-left: 20px;
+        margin: 0px $marginH 0px $marginH;
+
+        @include tablet{
+            display: flex;
+        }
         }
 
     &:active{ 
@@ -54,6 +63,11 @@
         :nth-child(3){
             font-weight: bold; }   
     }  
+
+    @include tablet{
+        width: 25%;        
+        margin: $marginV $marginH;
+    }
 }
 
 @mixin puce{
