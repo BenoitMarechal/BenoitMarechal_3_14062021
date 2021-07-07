@@ -1,5 +1,27 @@
 @charset "UTF-8";
 /*Vignettes resto*/
+@keyframes like--empty {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes like--full {
+  0% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
 body {
   max-width: 800px;
   background: #fff;
@@ -156,7 +178,8 @@ footer {
   flex-direction: column;
   width: 100%;
   height: 100%;
-  margin: 0px;
+  border-radius: 30px;
+  border: solid 1px green;
 }
 
 .restos {
@@ -169,6 +192,7 @@ footer {
 }
 .restos__vignette {
   display: flex;
+  z-index: 0;
   position: relative;
   flex-direction: column;
   align-items: center;
@@ -195,6 +219,7 @@ footer {
   justify-content: center;
   width: 100%;
   height: 75%;
+  border-radius: 30px;
 }
 .restos__vignette__imgcontainer__image {
   display: flex;
@@ -226,11 +251,17 @@ footer {
   width: auto;
   height: unset;
   position: relative;
+  z-index: 1;
+  border: 1px solid blue;
+}
+.restos__vignette__label__icon:active > .restos__vignette__label__icon--full {
+  animation-play-state: running;
 }
 .restos__vignette__label__icon--empty {
   color: #CECECE;
   opacity: 1;
-  z-index: 1;
+  z-index: 0;
+  animation: like--empty 200ms 0s paused;
 }
 .restos__vignette__label__icon--full {
   background: -webkit-linear-gradient(#9356DC, #FF79DA);
@@ -241,8 +272,13 @@ footer {
   bottom: 0px;
   right: 0px;
   left: 0px;
-  opacity: 1;
-  z-index: 0;
+  opacity: 0;
+  z-index: 1;
+  transform: scaleY(0);
+  animation-name: like--full;
+  animation-duration: 200ms;
+  animation-play-state: paused;
+  animation-fill-mode: forwards;
 }
 
 .btn-rond {
