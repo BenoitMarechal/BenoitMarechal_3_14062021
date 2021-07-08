@@ -24,4 +24,9 @@ body{
 
 .background{
     background: $colour-background;
+
+  /*  @include tablet{
+     @include lingrad1;
+       color: white;*/
+    
 }
