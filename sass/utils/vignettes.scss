@@ -117,12 +117,12 @@ justify-content: center;
                         color: $colour-inactive;
                         opacity: 1;
                        // z-index: 0;
-                        animation: like--empty 2000ms 0s paused forwards;
+                        animation: like--empty 200ms 0s paused forwards;
                        
                          
                     }
                     &--full{
-                       //display: none;
+                       
                         @include lingrad-like;
                         position: absolute;
                         top:0px;
@@ -133,7 +133,7 @@ justify-content: center;
                         z-index: 1;                        
                         transform: scaleY(0);
                         animation-name: like--full;
-                        animation-duration:  2000ms;                                               
+                        animation-duration:  200ms;                                               
                        animation-play-state: paused;
                         animation-fill-mode: forwards;
                         

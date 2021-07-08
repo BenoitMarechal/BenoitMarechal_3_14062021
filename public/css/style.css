@@ -312,7 +312,7 @@ footer i {
 .restos__vignette__label__icon--empty {
   color: #CECECE;
   opacity: 1;
-  animation: like--empty 2000ms 0s paused forwards;
+  animation: like--empty 200ms 0s paused forwards;
 }
 .restos__vignette__label__icon--full {
   background: -webkit-linear-gradient(#9356DC, #FF79DA);
@@ -327,7 +327,7 @@ footer i {
   z-index: 1;
   transform: scaleY(0);
   animation-name: like--full;
-  animation-duration: 2000ms;
+  animation-duration: 200ms;
   animation-play-state: paused;
   animation-fill-mode: forwards;
 }
