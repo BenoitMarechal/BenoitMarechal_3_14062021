@@ -244,7 +244,7 @@ footer i {
 }
 @media screen and (min-width: 801px) {
   .restos__vignette {
-    margin: 0px 5% 40px 5%;
+    margin: 0px 10% 40px 10%;
   }
 }
 .restos__vignette__imgcontainer {
