@@ -30,15 +30,15 @@ margin:0px;
 
     &__accroche{
         width: auto;
-        margin-top: 20px;
-        margin-bottom: 40px;
+        @include top-spacing-marginV;
+        //margin-bottom: 40px;
         
         h2{
         margin:0px 40px 0px 40px;
         }
         p{
             margin:0px 5px 0px 5px;
-            @include vertical-spacing-20;
+            @include top-spacing-marginV;
         } 
     }
 }

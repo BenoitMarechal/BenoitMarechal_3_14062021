@@ -1,7 +1,8 @@
 .btn-rond{
     @include btn-rond;
     padding: 1rem;
-    @include vertical-spacing-20;
+    @include top-spacing-marginV;
+    @include bottom-spacing-marginV;
     
 }
 

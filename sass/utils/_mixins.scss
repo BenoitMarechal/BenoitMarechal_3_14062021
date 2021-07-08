@@ -95,8 +95,12 @@
     font-weight: 900;    
 }
 
-@mixin vertical-spacing-20{
+@mixin top-spacing-marginV{
     margin-top: $marginV;
+}
+
+@mixin bottom-spacing-marginV{
+    margin-bottom: $marginV;
 }
 
 @mixin margin-default{
