@@ -26,159 +26,138 @@
 
         </header>
 
-        <nav>
+        <section class="fonctionnement">
             <h2>Fonctionnement</h2>
-            <div class="nav__btncontainer">
-            <a href="#restaurants" class="btn btn-nav">
-                <div class="btn-nav__puce">1</div> <!--Voir si possibilité d'automatiser la numérotation-->
-                <div class="btn-nav__icon"><i class="fas fa-mobile-alt"></i></div>
-                <div class="btn-nav__txt">Choisissez un restaurant</div>                
-            </a>  
+            <div class="fonctionnement__btncontainer">
+            <div href="#restaurants" class="btn btn-fonctionnement">
+                <div class="btn-fonctionnement__puce">1</div> <!--Voir si possibilité d'automatiser la numérotation-->
+                <div class="btn-fonctionnement__icon"><i class="fas fa-mobile-alt"></i></div>
+                <div class="btn-fonctionnement__txt">Choisissez un restaurant</div>                
+            </div>  
             
-            <a href="#" class="btn btn-nav">
-                
-                    <div class="btn-nav__puce">2</div> <!--Voir si possibilité d'automatiser la numérotation-->
-                    <div class="btn-nav__icon"><i class="fas fa-list-ul"></i></div>
-                    <div class="btn-nav__txt">Composez votre propre menu</div>
-            </a>
-             
+            <div  class="btn btn-fonctionnement">                
+                    <div class="btn-fonctionnement__puce">2</div> <!--Voir si possibilité d'automatiser la numérotation-->
+                    <div class="btn-fonctionnement__icon"><i class="fas fa-list-ul"></i></div>
+                    <div class="btn-fonctionnement__txt">Composez votre propre menu</div>
+            </div>
 
-            <a href="#" class="btn btn-nav">
-                <div class="btn-nav__puce">3</div> <!--Voir si possibilité d'automatiser la numérotation-->
-                <div class="btn-nav__icon"><i class="fas fa-store"></i></div>
-                <div class="btn-nav__txt">Déguster au restaurant</div>
-            </a>
-        </div>
+            <div  class="btn btn-fonctionnement">
+                <div class="btn-fonctionnement__puce">3</div> <!--Voir si possibilité d'automatiser la numérotation-->
+                <div class="btn-fonctionnement__icon"><i class="fas fa-store"></i></div>
+                <div class="btn-fonctionnement__txt">Déguster au restaurant</div>
+            </div>
+            </div>
              
-        </nav>
+        </section>
+
+
+
+
     <main class="background" id="restaurants">
-        <h2>Restaurants</h2>
-            <section class="restos">
-                <article class="restos__vignette">
-                    <a href="">
-                            <div class="restos__vignette__imgcontainer">
-                                <div class="restos__vignette__imgcontainer__nouveau restos__vignette__imgcontainer__nouveau--1">Nouveau                            
-                                </div> 
-                                <img class="restos__vignette__imgcontainer__image" src="images\restaurants\jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
-                            </div>
-                                                   
-                            <div class="restos__vignette__label">
-                                <div class="restos__vignette__label__txt">
-                                    <div class="restos__vignette__label__txt__name">La palette du goût</div>
-                                    <div class="restos__vignette__label__txt__location">Ménilmontant</div>
-                                </div>                            
-                                                       
-                                <div class="restos__vignette__label__icon">
-                                    <div class="restos__vignette__label__icon--empty">
-                                    <i class="far fa-heart"></i>
-                                    </div>
-                                    <div class="restos__vignette__label__icon--full">
-                                    <i class="fas fa-heart"></i>
-                                    </div>  
-                                </div>
-                                                            
-                            </div>
-                                
+        <section class="restos">
+        <h2>Restaurants</h2>            
+            <article class="restos__vignette">
+                <a class= "restos__vignette__imgcontainer" href="">
+                    <div class="restos__vignette__imgcontainer__nouveau restos__vignette__imgcontainer__nouveau--block">Nouveau                            
+                    </div>
+                    <img class="restos__vignette__imgcontainer__image" src="images\restaurants\jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
+                </a>                               
+                <div class="restos__vignette__label">
+                    <div class="restos__vignette__label__txt">
+                        <div class="restos__vignette__label__txt__name">La palette du goût
                         </div>
-                    </a>
-                </article> 
-
-                <article class="restos__vignette">
-                    <a href="">
-                        <div class="restos__vignette__imgcontainer">
-                            <div class="restos__vignette__imgcontainer__nouveau restos__vignette__imgcontainer__nouveau--1">Nouveau                            
-                            </div> 
-                            <img class="restos__vignette__imgcontainer__image" src="images\restaurants\stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
-                            </div>
-                                                   
-                            <div class="restos__vignette__label">
-                                <div class="restos__vignette__label__txt">
-                                    <div class="restos__vignette__label__txt__name">La note enchantée</div>
-                                    <div class="restos__vignette__label__txt__location">Charonne</div>
-                                </div>                            
-                                                       
-                                <div class="restos__vignette__label__icon">
-                                    <div class="restos__vignette__label__icon--empty">
-                                    <i class="far fa-heart"></i>
-                                    </div>
-                                    <div class="restos__vignette__label__icon--full">
-                                    <i class="fas fa-heart"></i>
-                                    </div>  
-                                </div>
-                                                            
-                            </div>
-                                
+                        <div class="restos__vignette__label__txt__location">Ménilmontant
                         </div>
-                    </a>
-                </article> 
-
-                <article class="restos__vignette">
-                        <a href="">
-                            <div class="restos__vignette__imgcontainer">
-                                <div class="restos__vignette__imgcontainer__nouveau restos__vignette__imgcontainer__nouveau--0">Nouveau                            
-                                </div> 
-                            <img class="restos__vignette__imgcontainer__image" src="images\restaurants\toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="À la française">
-                            </div>
-                                                   
-                            <div class="restos__vignette__label">
-                                <div class="restos__vignette__label__txt">
-                                    <div class="restos__vignette__label__txt__name">À la française</div>
-                                    <div class="restos__vignette__label__txt__location">Cité rouge</div>
-                                </div>                            
-                                                       
-                                <div class="restos__vignette__label__icon">
-                                    <div class="restos__vignette__label__icon--empty">
-                                    <i class="far fa-heart"></i>
-                                    </div>
-                                    <div class="restos__vignette__label__icon--full">
-                                    <i class="fas fa-heart"></i>
-                                    </div>  
-                                </div>
-                                                            
-                            </div>
-                                
+                    </div>                                     
+                    <div class="restos__vignette__label__icon">
+                        <div class="restos__vignette__label__icon--empty">
+                            <i class="far fa-heart">    
+                            </i>
                         </div>
-                    </a>
-                </article> 
+                        <div class="restos__vignette__label__icon--full">
+                            <i class="fas fa-heart">    
+                            </i>
+                        </div>  
+                    </div>                        
+                </div>    
+            </article> 
 
-                <article class="restos__vignette">
-                    <a href="">
-                            <div class="restos__vignette__imgcontainer">
-                                <div class="restos__vignette__imgcontainer__nouveau restos__vignette__imgcontainer__nouveau--0">Nouveau                            
-                                </div> 
-                            
-                                <img class="restos__vignette__imgcontainer__image" src="images\restaurants\louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens">
-                            </div>
-                                                   
-                            <div class="restos__vignette__label">
-                                <div class="restos__vignette__label__txt">
-                                    <div class="restos__vignette__label__txt__name">Le délice des sens</div>
-                                    <div class="restos__vignette__label__txt__location">Folie Méricourt</div>
-                                </div>                            
-                                                       
-                                <div class="restos__vignette__label__icon">
-                                    <div class="restos__vignette__label__icon--empty">
-                                    <i class="far fa-heart"></i>
-                                    </div>
-                                    <div class="restos__vignette__label__icon--full">
-                                    <i class="fas fa-heart"></i>
-                                    </div>  
-                                </div>
-                                                            
-                            </div>
-                                
+            <article class="restos__vignette">
+                <a href="" class="restos__vignette__imgcontainer">
+                    <div class="restos__vignette__imgcontainer__nouveau restos__vignette__imgcontainer__nouveau--block">Nouveau                            
+                    </div> 
+                    <img class="restos__vignette__imgcontainer__image" src="images\restaurants\stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
+                </a>
+                <div class="restos__vignette__label">
+                    <div class="restos__vignette__label__txt">
+                        <div class="restos__vignette__label__txt__name">La note enchantée 
                         </div>
-                    </a>
-                </article> 
-                
-                
+                        <div class="restos__vignette__label__txt__location">Charonne
+                        </div>
+                    </div>                            
+                    <div class="restos__vignette__label__icon">
+                        <div class="restos__vignette__label__icon--empty">
+                            <i class="far fa-heart">    
+                            </i>
+                        </div>
+                        <div class="restos__vignette__label__icon--full">        
+                            <i class="fas fa-heart">
+                            </i>
+                        </div>  
+                    </div>
+                </div>
+            </article> 
 
+            <article class="restos__vignette">
+                <a href="" class="restos__vignette__imgcontainer">
+                    <div class="restos__vignette__imgcontainer__nouveau restos__vignette__imgcontainer__nouveau--none">Nouveau                            
+                    </div> 
+                    <img class="restos__vignette__imgcontainer__image" src="images\restaurants\toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="À la française">
+                </a>                           
+                <div class="restos__vignette__label">
+                    <div class="restos__vignette__label__txt">
+                        <div class="restos__vignette__label__txt__name">À la française   
+                        </div>
+                        <div class="restos__vignette__label__txt__location">Cité rouge
+                        </div>
+                    </div>                                     
+                    <div class="restos__vignette__label__icon">
+                        <div class="restos__vignette__label__icon--empty">
+                            <i class="far fa-heart">
+                            </i>
+                        </div>
+                        <div class="restos__vignette__label__icon--full">
+                            <i class="fas fa-heart">
+                            </i>
+                        </div>  
+                    </div>                                            
+                </div>
+            </article> 
 
-
-
-
-                        
-            </section>
+            <article class="restos__vignette">
+                <a href="" class="restos__vignette__imgcontainer">
+                    <div class="restos__vignette__imgcontainer__nouveau restos__vignette__imgcontainer__nouveau--none">Nouveau                            
+                    </div> 
+                    <img class="restos__vignette__imgcontainer__image" src="images\restaurants\louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens">
+                </a>                                    
+                <div class="restos__vignette__label">
+                    <div class="restos__vignette__label__txt">
+                        <div class="restos__vignette__label__txt__name">Le délice des sens</div>
+                        <div class="restos__vignette__label__txt__location">Folie Méricourt</div>
+                    </div>                            
+                    <div class="restos__vignette__label__icon">
+                        <div class="restos__vignette__label__icon--empty">
+                            <i class="far fa-heart">
+                            </i>
+                        </div>
+                        <div class="restos__vignette__label__icon--full">
+                            <i class="fas fa-heart">
+                            </i>
+                        </div>  
+                    </div>
+                </div>
+            </article> 
+        </section>
     </main>
 
         <footer class="footer">

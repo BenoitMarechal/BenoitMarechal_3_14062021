@@ -25,7 +25,7 @@
     -webkit-text-fill-color: transparent; 
 }
 
-@mixin btn-nav{
+@mixin btn-fonctionnement{
     display: flex;
     flex-direction: row;
     flex-wrap:nowrap;
@@ -57,7 +57,7 @@
         }
         }
 
-    &:active{ 
+    &:hover{ 
         background:lighten($color: $colour-primary, $amount: 30);
         :nth-child(2){
             color:$colour-primary;}

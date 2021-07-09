@@ -1,37 +1,168 @@
-
-.restos__vignette a{
-    display: flex;
-    flex-direction: column;
-    width: $vignwidth;
-    height: $vignheight;
-    border-radius: $vignradius;
-}
-
 .restos{
-display: flex;
+    display: flex;
 width: auto;
 flex-direction: column;
 flex-wrap: nowrap;
 align-items: center;
 justify-content: center;
-    @include tablet{
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-content: center;
-    }
+        @include tablet{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+        }
+
+        & h2{
+            display: flex;
+            width: 100%;            
+        }
+
+        &__vignette{
+            width:$vignwidth;
+            height: $vignheight;
+            display: flex;
+            flex-direction: column;
+            border-radius: $vignradius;
+            @include shadow;
+            
+            &__imgcontainer{
+                height: 70%;
+                position: relative;
+                border-radius: $vignradius $vignradius 0px 0px;
+                
+                &__image{
+                    object-fit: cover;
+                    width: 100%;
+                     height: 100%;
+                     border-radius: $vignradius $vignradius 0px 0px;
+                
+                }
+
+                &__nouveau{
+                    display: block;
+                    @include nouveau;
+                    position: absolute;
+                   right: 5%;
+                   top: 15%;
+                    &--none{
+                        display: none;
+                    }                
+                }
+            }
+
+            &__label{
+                height: 30%;
+                display: flex;                
+                flex-direction: row;
+                justify-content: space-between;
+                align-items:center;
+                border-radius: 0px 0px $vignradius $vignradius;
+                padding: 0px $marginV 0px $marginV; 
+
+               &__txt{
+                   display:flex;
+                   height: 100%;
+                   flex-direction: column;
+                   justify-content: center;
+
+                   &__name{
+                    margin-bottom: 5px;
+                    }                   
+                  
+               }
+               &__icon{
+                    font-size: 2.2rem;
+                    display: flex;            
+                    width: auto;
+                    height: unset;
+                    position: relative;
+                    z-index: 1;
+                    cursor: pointer;
+
+                    &:active > &--full{
+                    animation-play-state: running;
+                    animation-fill-mode: forwards;                       
+                    }
+                    &:active > &--empty{
+                    animation-play-state: running;
+                    animation-fill-mode: forwards;                       
+                    }
+
+                  &--empty{
+                        color: $colour-inactive;
+                        opacity: 1;
+                        z-index: 0;
+                        animation: like--empty 400ms 0s paused forwards;                         
+                    }
+
+                    &--full{
+                        @include lingrad-like;
+                        position: absolute;
+                        transform-origin: bottom;
+                        top:0px;
+                        bottom: 0px;
+                        right: 0px;
+                        left: 0px;                        
+                        opacity: 1;
+                        z-index: 1;                        
+                        transform: scaleY(0);
+                        animation-name: like--full;
+                        animation-duration:  400ms;                                               
+                        animation-play-state: paused;
+                        animation-fill-mode: forwards;
+                        
+                    }
+                    
+
+               }
+               
+            }
+
+        }
+
+}
+
+
+
+/*
+
+.restos__vignette a{
+    display: flex;
+    flex-direction: column;
+    height: 75%;
+    width: 100%;
+    border-radius: $vignradius $vignradius 0px 0px;
+    
+}
+
+
+
+.restos{
+
+
+    
+
+    
 
     &__vignette{
+        cursor: pointer;
         display: flex; 
         z-index: 0;
          position: relative;
         flex-direction: column; 
-        align-items: center;
-        justify-content: flex-start;
+      //  align-items: center;
+      //  justify-content: flex-start;
         z-index: 0;  
+        width: $vignwidth;
+        height: $vignheight;
+        //width: auto;
+        //height: auto;
+        border-radius: $vignradius;
+
+
         @include shadow;  
         border-radius: $vignradius;
-       min-width: $vignwidth; 
+         min-width: $vignwidth; 
         margin: 0px 0px 2*$marginV 0px;  
             @include tablet{                
                 margin: 0px 10% 2*$marginV 10%;
@@ -44,20 +175,12 @@ justify-content: center;
                 align-items: center;
                 justify-content: center; 
                 width: 100%;
-                height: 75%;
-                border-radius: $vignradius;
+                height: 100%;
+                border-radius: $vignradius $vignradius 0px 0px;
                 position: relative;
                 
 
-                &__nouveau{
-                    @include nouveau;
-                    position: absolute;
-                    right: 5%;
-                    top: 15%;
-                    &--0{
-                        display: none;
-                    }                
-                }
+                
                 
                 
                 
@@ -74,11 +197,12 @@ justify-content: center;
 
             &__label{
                 display: flex;
+                
                 flex-direction: row;
                 justify-content: space-between;
-                align-items: center;
-               height: 25%;
-               margin: 0px $marginV 0px $marginH;
+                align-items: stretch;
+                height: 35%;
+               margin: 0.5*$marginV $marginV 0px $marginH;
                
 
                 &__txt{
@@ -86,8 +210,9 @@ justify-content: center;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-around;
-                    height: 100%; 
-                    margin-left: $marginH;       
+                    
+                    //height: 100%; 
+                   // margin-left: $marginH;       
 
 
                     
@@ -102,42 +227,12 @@ justify-content: center;
                     position: relative;
                     z-index: 1;
                    
-                   &:hover > &--full{
-                       animation-play-state: running;
-                      // animation-fill-mode: forwards;
-                      
-                   }
+                   
 
-                    &:hover > &--empty{
-                        animation-play-state: running;
-                       
-                     }
+                    
 
-                    &--empty{
-                        color: $colour-inactive;
-                        opacity: 1;
-                       // z-index: 0;
-                        animation: like--empty 200ms 0s /*paused*/ /*forwards*/;
-                       
-                         
-                    }
-                    &--full{
-                       
-                        @include lingrad-like;
-                        position: absolute;
-                        top:0px;
-                        bottom: 0px;
-                        right: 0px;
-                        left: 0px;                        
-                        opacity: 0;
-                        z-index: 1;                        
-                        transform: scaleY(0);
-                        animation-name: like--full;
-                        animation-duration:  200ms;                                               
-                       animation-play-state: paused;
-                       // animation-fill-mode: forwards;
-                        
-                    }
+                    
+                    
 
                        
                     }
@@ -145,5 +240,8 @@ justify-content: center;
                 }
             }
         
-
+        }
     }
+
+    */
+;

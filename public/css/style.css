@@ -159,15 +159,14 @@ h2 {
   margin-top: 20px;
 }
 
-nav {
+.fonctionnement {
   background: #fff;
   width: auto;
   padding-bottom: 20px;
   margin: 0px 15px 0px 15px;
 }
-
 @media screen and (min-width: 801px) {
-  .nav__btncontainer {
+  .fonctionnement__btncontainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -241,14 +240,6 @@ footer i {
   }
 }
 
-.restos__vignette a {
-  display: flex;
-  flex-direction: column;
-  width: 350px;
-  height: 250px;
-  border-radius: 30px;
-}
-
 .restos {
   display: flex;
   width: auto;
@@ -265,34 +256,31 @@ footer i {
     align-content: center;
   }
 }
-.restos__vignette {
+.restos h2 {
   display: flex;
-  z-index: 0;
-  position: relative;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  z-index: 0;
-  box-shadow: 2px 2px 10px -2px #303030;
-  border-radius: 30px;
-  min-width: 350px;
-  margin: 0px 0px 40px 0px;
+  width: 100%;
 }
-@media screen and (min-width: 801px) {
-  .restos__vignette {
-    margin: 0px 10% 40px 10%;
-  }
+.restos__vignette {
+  width: 350px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  box-shadow: 2px 2px 10px -2px #303030;
 }
 .restos__vignette__imgcontainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 75%;
-  border-radius: 30px;
+  height: 70%;
   position: relative;
+  border-radius: 30px 30px 0px 0px;
+}
+.restos__vignette__imgcontainer__image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px 30px 0px 0px;
 }
 .restos__vignette__imgcontainer__nouveau {
+  display: block;
   background: #99E2D0;
   color: #32b091;
   padding: 7px;
@@ -303,32 +291,26 @@ footer i {
   right: 5%;
   top: 15%;
 }
-.restos__vignette__imgcontainer__nouveau--0 {
+.restos__vignette__imgcontainer__nouveau--none {
   display: none;
 }
-.restos__vignette__imgcontainer__image {
-  display: flex;
-  object-fit: cover;
-  width: auto;
-  width: 100%;
-  height: 100%;
-  border-radius: 30px 30px 0px 0px;
-}
 .restos__vignette__label {
+  height: 30%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 25%;
-  margin: 0px 20px 0px 15px;
+  border-radius: 0px 0px 30px 30px;
+  padding: 0px 20px 0px 20px;
 }
 .restos__vignette__label__txt {
-  margin: 0px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
   height: 100%;
-  margin-left: 15px;
+  flex-direction: column;
+  justify-content: center;
+}
+.restos__vignette__label__txt__name {
+  margin-bottom: 5px;
 }
 .restos__vignette__label__icon {
   font-size: 2.2rem;
@@ -337,35 +319,161 @@ footer i {
   height: unset;
   position: relative;
   z-index: 1;
+  cursor: pointer;
 }
-.restos__vignette__label__icon:hover > .restos__vignette__label__icon--full {
+.restos__vignette__label__icon:active > .restos__vignette__label__icon--full {
   animation-play-state: running;
+  animation-fill-mode: forwards;
 }
-.restos__vignette__label__icon:hover > .restos__vignette__label__icon--empty {
+.restos__vignette__label__icon:active > .restos__vignette__label__icon--empty {
   animation-play-state: running;
+  animation-fill-mode: forwards;
 }
 .restos__vignette__label__icon--empty {
   color: #CECECE;
   opacity: 1;
-  animation: like--empty 200ms 0s;
+  z-index: 0;
+  animation: like--empty 400ms 0s paused forwards;
 }
 .restos__vignette__label__icon--full {
   background: -webkit-linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: absolute;
+  transform-origin: bottom;
   top: 0px;
   bottom: 0px;
   right: 0px;
   left: 0px;
-  opacity: 0;
+  opacity: 1;
   z-index: 1;
   transform: scaleY(0);
   animation-name: like--full;
-  animation-duration: 200ms;
+  animation-duration: 400ms;
   animation-play-state: paused;
+  animation-fill-mode: forwards;
 }
 
+/*
+
+.restos__vignette a{
+    display: flex;
+    flex-direction: column;
+    height: 75%;
+    width: 100%;
+    border-radius: $vignradius $vignradius 0px 0px;
+
+}
+
+
+
+.restos{
+
+
+
+
+
+
+    &__vignette{
+        cursor: pointer;
+        display: flex; 
+        z-index: 0;
+         position: relative;
+        flex-direction: column; 
+      //  align-items: center;
+      //  justify-content: flex-start;
+        z-index: 0;  
+        width: $vignwidth;
+        height: $vignheight;
+        //width: auto;
+        //height: auto;
+        border-radius: $vignradius;
+
+
+        @include shadow;  
+        border-radius: $vignradius;
+         min-width: $vignwidth; 
+        margin: 0px 0px 2*$marginV 0px;  
+            @include tablet{                
+                margin: 0px 10% 2*$marginV 10%;
+            }     
+
+
+
+            &__imgcontainer{
+                display: flex;
+                align-items: center;
+                justify-content: center; 
+                width: 100%;
+                height: 100%;
+                border-radius: $vignradius $vignradius 0px 0px;
+                position: relative;
+
+
+
+
+
+
+                &__image{
+                    display: flex;
+                    object-fit: cover;
+                    width: auto;                    
+                    width: 100%;
+                     height: 100%;
+                border-radius: $vignradius $vignradius 0px 0px;
+                }
+
+            }
+
+            &__label{
+                display: flex;
+
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: stretch;
+                height: 35%;
+               margin: 0.5*$marginV $marginV 0px $marginH;
+
+
+                &__txt{
+                    margin: 0px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+
+                    //height: 100%; 
+                   // margin-left: $marginH;       
+
+
+
+
+                }
+
+                &__icon{
+                    font-size: 2.2rem;
+                    display: flex;            
+                    width: auto;
+                    height: unset;
+                    position: relative;
+                    z-index: 1;
+
+
+
+
+
+
+
+
+
+                    }
+
+                }
+            }
+
+        }
+    }
+
+    */
 .btn-rond {
   color: white;
   /*faire fonction noir/blanc*/
@@ -379,7 +487,7 @@ footer i {
   background: linear-gradient(#FF79DA, #9356DC);
 }
 
-.btn-nav {
+.btn-fonctionnement {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -394,7 +502,7 @@ footer i {
   position: relative;
   box-shadow: 2px 2px 10px -2px #303030;
 }
-.btn-nav__puce {
+.btn-fonctionnement__puce {
   color: white;
   /*faire fonction noir/blanc*/
   border-radius: 50rem;
@@ -409,30 +517,30 @@ footer i {
   background: #9356DC;
   /*voir mixin puce plus bas*/
 }
-.btn-nav__icon {
+.btn-fonctionnement__icon {
   color: #CECECE;
   font-size: 1.5rem;
   margin: 0px 0px 0px 25px;
 }
-.btn-nav__txt {
+.btn-fonctionnement__txt {
   margin: 0px 15px 0px 15px;
 }
 @media screen and (min-width: 801px) {
-  .btn-nav__txt {
+  .btn-fonctionnement__txt {
     display: flex;
   }
 }
-.btn-nav:active {
+.btn-fonctionnement:hover {
   background: #e4d5f6;
 }
-.btn-nav:active :nth-child(2) {
+.btn-fonctionnement:hover :nth-child(2) {
   color: #9356DC;
 }
-.btn-nav:active :nth-child(3) {
+.btn-fonctionnement:hover :nth-child(3) {
   font-weight: bold;
 }
 @media screen and (min-width: 801px) {
-  .btn-nav {
+  .btn-fonctionnement {
     width: 25%;
     margin: 20px 15px;
   }

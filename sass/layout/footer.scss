@@ -20,9 +20,6 @@ footer i{
     padding-bottom: $marginV;
         @include tablet{
             align-items: center;}
-     
-
-    
             &__logo{
                 display: flex;
                     @include tablet{
