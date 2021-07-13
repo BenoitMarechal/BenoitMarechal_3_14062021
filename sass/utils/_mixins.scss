@@ -9,9 +9,12 @@
 
 @mixin btn-rond{
    // width: auto;
-    color: white; /*faire fonction noir/blanc*/
-    border-radius: 50rem;      
-
+    color:$colour-white; /*faire fonction noir/blanc*/
+    border-radius: 50rem;
+   /* @include mobile{
+    border-radius: 50rem;
+    }    
+    */
     
 }
 

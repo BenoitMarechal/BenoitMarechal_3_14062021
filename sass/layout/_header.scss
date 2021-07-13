@@ -9,13 +9,20 @@ text-align: center;
 padding: 0px;
 margin:0px;
 
+
+
     @include tablet{      
-        :nth-child(1){ order: 2;}
-        :nth-child(2){ order: 1;}
-        :nth-child(3){ order: 4;}
-        :nth-child(4){ order: 3;}
-        flex-flow: row wrap;
-        justify-content: space-between;            
+        :nth-child(1){ order: 2;} /*logo*/
+        :nth-child(2){ order: 1;} /*location*/
+        :nth-child(3){ order: 3;} /*accroche */
+        :nth-child(4){ order: 4;}/*bouton*/
+        flex-flow: row nowrap;
+        height: $header-desktop-height;
+         
+        
+        
+        position: relative;
+        //height: 150px;           
         }
     
 
@@ -25,6 +32,14 @@ margin:0px;
         width: auto;
         @include tablet{
             transform: scale(2);
+            height: auto;
+            display: flex;
+            justify-content: center;
+            margin: 0px;
+            width: auto;
+           position: absolute;
+           top: $marginV;
+            /*left: 50%*/
         }
         
         }
@@ -40,6 +55,10 @@ margin:0px;
         border-top: 2px solid darken($color: $colour-background, $amount: 20); 
         @include tablet{
             flex-flow: column-reverse wrap;
+            width: auto;
+          //  height: $header-desktop-height;
+          height: 100%;
+            border: none;
             width: 25%;
         }
 
@@ -47,10 +66,16 @@ margin:0px;
             p{
                 
                 margin-left: 10px;
+                @include tablet{
+                    font-size: 1.2rem;
+                }
             }
             .fas{
                 
-                font-size: 1.5rem;
+                font-size: 1.2rem;
+                @include tablet{
+                    font-size: 2.5rem;
+                }
 
             }
         }
@@ -63,20 +88,42 @@ margin:0px;
 
         @include tablet{
             flex-flow: column-reverse nowrap;
-            width: 100%;
+            justify-content: flex-start;
+            width: 50%;
+            height: 100%;
+           margin: 0px;
+           padding: 0px;
+            
+            
         }
         
         
         h2{
            
         margin:0px 40px 0px 40px;
+        @include tablet{
+            margin:0px 0px $marginH 0px;
         }
-        p{
-            
+        }
+        p{            
             margin:0px 5px 0px 5px;
             @include top-spacing-marginV;
+            @include tablet{
+                margin:0px 0px $marginH 0px;
+            }
+            
         } 
     }
+/*
+    &__btn{
+        @include tablet{
+            height: $header-desktop-height;
+            width: 25%;
+            border-radius: 15px;
+        }
+    }
+
+ */   
 }
 
  
