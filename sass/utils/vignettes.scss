@@ -28,7 +28,7 @@ justify-content: center;
             @include bottom-spacing-marginV;
 
             @include tablet{                
-                margin: 0px 10% 2*$marginV 10%;
+                margin: 0px 10% 2*$marginV 10%;            
             } 
             
             &__imgcontainer{
