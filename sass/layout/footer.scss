@@ -4,7 +4,7 @@
     display: flex;
     @include tablet{
         justify-content: center;
-    }
+    }               
 
     &__content{
         display: flex;
