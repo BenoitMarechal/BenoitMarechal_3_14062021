@@ -1,5 +1,9 @@
 .btn{
+    cursor: pointer;
     @include shadow;
+    &:hover{
+        @include shadow--hover;
+    }
 }
 
 

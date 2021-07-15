@@ -1,45 +1,114 @@
-footer{
-    padding: 0px $marginH 0px $marginH;
-}
-
-footer i{
-    margin-right: 10px;
-    width:$marginH ;
-    height: $marginH ;
-}
-
-
 .footer{
     background: $colour-footer;
-    display:flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
+    color: $colour-white;
+    display: flex;
+    @include tablet{
+        justify-content: center;
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        margin-left: $marginH;
+        justify-content: center;
+        margin: $marginV;
+        @include tablet{
+            margin:0px;
+            width: 100%;
+        }
+            
+
+        &__logo{  
+            display: flex;          
+            width: auto;
+            margin:0px 0px $marginV*0.5 0px;
+            @include tablet{
+                font-size: 3rem; 
+                justify-content: center;
+                margin-bottom: $marginV; 
+                @include top-spacing-marginV;                          
+                }
+
+
+            
+            }
+        &__ul{
+            display: flex;
+            flex-direction: column;
+            margin: 0px;
+            padding: 0px;            
+            @include tablet{
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 100%;
+                justify-content: space-between;
+                @include bottom-spacing-marginV;
+                }
+
+
+            &__li{
+                display: flex;
+                list-style-type: none;
+                margin:0px 0px $marginV*0.5 0px; 
+                @include tablet{
+                    width: 50%;
+                    justify-content: center;
+                }             
+
+            }
+            
+        }    
+    
+    }
+}
+
+
+
+
+
+/*
+
+.footer{
+    background: $colour-footer;    
     width: 100%;
     color:$colour-white;
-    font-weight: normal;
-    padding-bottom: $marginV;
+    font-weight: normal;        
+
+    &__content{
+        margin-left: $marginH;
+        @include top-spacing-marginV;
+        @include bottom-spacing-marginV;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
         @include tablet{
-            align-items: center;}
+            margin: 0px;
+        }
             &__logo{
                 display: flex;
+                width: auto;
                     @include tablet{
                     transform: scale(2.2);
                     padding-bottom: $marginV*0.5;
                     padding-top: $marginV*0.5;            
                     }
             }
-        &__ul{
-                display: flex;
-                flex-direction: column;
-                margin: 0px;
-                padding: 0px;
-                    @include tablet{
-                        flex-direction: row;
-                        flex-wrap: wrap;
-                        
-                        width: 100%;
-                        justify-content: space-between;
-                    }
+    & i{
+        margin-right: 10px;
+        width:$marginH ;
+        height: $marginH ;
+            }    
+    &__ul{
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+        padding: 0px;
+            @include tablet{
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 100%;
+                justify-content: space-between;
+                }
                             &__li{
                             
                                     margin: 0px 0px ($marginV*0.5) 0px; 
@@ -54,7 +123,12 @@ footer i{
                             
                                 }
             }
-
+        }        
 }
+*/
+
+
+
+
 
     

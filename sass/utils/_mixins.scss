@@ -90,6 +90,10 @@
 @mixin shadow{
     box-shadow: 2px 2px 10px -2px $colour-footer;
 }
+@mixin shadow--hover{
+    box-shadow: 4px 4px 20px -2px $colour-footer;
+}
+
 
 @mixin nouveau{
     background:$colour-tertiary;

@@ -18,18 +18,22 @@ justify-content: center;
         }
 
         &__vignette{
-            width:$vignwidth;
-            height: $vignheight;
+            width:$vignwidth*0.8;
+            height: $vignheight*0.8;
+            //max-height: 320px;
             display: flex;
             flex-direction: column;
             border-radius: $vignradius;
             @include shadow;
             @include top-spacing-marginV;
             @include bottom-spacing-marginV;
-
-            @include tablet{                
-                margin: 0px 10% 2*$marginV 10%;       
-                     
+            @include tablet{            
+                margin: 0px 10% 2*$marginV 10%;
+                width:$vignwidth;
+                 height: $vignheight;
+                 &:hover{
+                     @include shadow--hover;
+                 }
             } 
             
             &__imgcontainer{
