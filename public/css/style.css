@@ -4,6 +4,7 @@
 /*Vignettes resto*/
 /*tailles incones footer*/
 /*hauteur header desktop*/
+/*variables animation*/
 @keyframes like--empty {
   0% {
     opacity: 1;
@@ -23,7 +24,37 @@
   }
   100% {
     transform: scaleY(1);
+  }
+}
+@keyframes spinner--background {
+  0% {
     opacity: 1;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@keyframes spinner--rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinner--fade {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 html, body {
@@ -44,6 +75,67 @@ body {
   /*  @include tablet{
      @include lingrad1;
        color: white;*/
+}
+
+.spinner {
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+.spinner__background {
+  background: #CECECE;
+  opacity: 1;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  animation: spinner--background 2.5s 0s cubic-bezier(0.71, 0.21, 0.58, 0.97) forwards;
+}
+.spinner__loading {
+  position: absolute;
+  animation: spinner--fade 3s 0s linear forwards;
+}
+.spinner__loading__center {
+  font-size: 15rem;
+  animation: none;
+  color: #9356DC;
+}
+.spinner__loading__rotator {
+  font-size: 6rem;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  color: #FF79DA;
+  animation: spinner--rotation 1.9s 0s infinite cubic-bezier(0.5, 0.29, 0.66, 0.83) reverse;
+}
+.spinner__loading__rotator :nth-child(2) {
+  transform: rotate(120deg);
+}
+.spinner__loading__rotator :nth-child(3) {
+  transform: rotate(240deg);
+}
+.spinner__loading__rotator__container {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  display: flex;
+  align-items: center;
+}
+.spinner__loading__rotator__container i {
+  position: absolute;
+  left: 110%;
 }
 
 /*FONTS*/

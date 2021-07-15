@@ -7,27 +7,81 @@ html,body
     overflow-x: hidden; 
 }
 
-
-
-
-
-
-
 body{   
     background: $colour-white;    
-    min-width: 385px;
-    
-    
-    
-    
-    
+    min-width: 385px; 
 }
-
 .background{
     background: $colour-background;
 
   /*  @include tablet{
      @include lingrad1;
-       color: white;*/
-    
+       color: white;*/    
+}
+
+.spinner{
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+        top:0px;
+        bottom: 0px;
+        left:0px;
+        right:0px;
+    &__background{               
+        background: $colour-inactive;
+        opacity: 1;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        //z-index: 10;
+        animation: spinner--background 2.5s 0s cubic-bezier(.71,.21,.58,.97) forwards;
+    }
+    &__loading{
+        position: absolute;
+        animation: spinner--fade 3s 0s linear forwards;
+
+        &__center{
+            font-size: 15rem;
+            animation: none;
+            color: $colour-primary;
+        }
+
+        &__rotator{
+            font-size: 6rem;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top:0px;
+            bottom: 0px;
+            left:0px;
+            right:0px;
+            color: $colour-secondary;
+            :nth-child(2){
+                transform: rotate(120deg);
+                }
+                :nth-child(3){
+                transform: rotate(240deg);
+                }             
+            animation: spinner--rotation 1.9s 0s infinite cubic-bezier(.5,.29,.66,.83) reverse;           
+            
+            &__container{
+                position: absolute;
+                top:0px;
+                bottom: 0px;
+                left:0px;
+                right:0px;             
+                display: flex;
+                align-items: center;          
+            }
+
+            &__container i{
+                position: absolute;
+                left:110%;
+            }
+            
+        }
+    }
 }
