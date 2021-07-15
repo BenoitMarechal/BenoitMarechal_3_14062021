@@ -1,4 +1,4 @@
-/*
+
 html,body
 {
     width: 100%;
@@ -6,10 +6,11 @@ html,body
     margin: 0px;
     padding: 0px;
 }
-*/
+
 
 body{   
-    background: $colour-white;    
+    background: $colour-white; 
+    //margin: 0px;   
     //min-width: 385px; 
   //  display: flex;
   //  flex-direction: column;

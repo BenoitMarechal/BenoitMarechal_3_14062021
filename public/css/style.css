@@ -64,15 +64,13 @@
     opacity: 0;
   }
 }
-/*
-html,body
-{
-    width: 100%;
-    height: 100%;   
-    margin: 0px;
-    padding: 0px;
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
 }
-*/
+
 body {
   background: #fff;
 }
@@ -481,8 +479,8 @@ main {
   width: 100%;
 }
 .restos__vignette {
-  width: 280px;
-  height: 200px;
+  height: 250px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   border-radius: 30px;
