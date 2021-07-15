@@ -4,7 +4,7 @@ html,body
     height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden; 
+   // overflow-x: hidden; 
 }
 
 body{   
@@ -13,10 +13,7 @@ body{
 }
 .background{
     background: $colour-background;
-
-  /*  @include tablet{
-     @include lingrad1;
-       color: white;*/    
+    
 }
 
 .spinner{
@@ -30,9 +27,12 @@ body{
         bottom: 0px;
         left:0px;
         right:0px;
+     animation: spinner--index ($spin-time + 1ms) 0s step-end forwards;
+     
+
     &__background{               
         background: $colour-inactive;
-        opacity: 1;
+        opacity: 0;
         display: flex;
         width: 100%;
         height: 100%;

@@ -27,10 +27,27 @@
     }
 }
 
+
+@keyframes spinner--index {
+    0%{
+        z-index: 10;
+    
+    }
+    99%{
+        z-index: 10;
+    
+    }
+
+    100%{
+        z-index: -10;
+    }
+}
+
+
 @keyframes spinner--background{
     0%{
         
-        opacity: 1;
+        opacity: 1;        
     }
 
     80%{
@@ -40,7 +57,7 @@
     100%{
         
         opacity: 0; 
-        z-index: -10;
+        
                
     }
 
