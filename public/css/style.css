@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /*Couleurs*/
+/*Degradés*/
 /*valeurs de marge les plus uitlisées*/
 /*Vignettes resto*/
 /*tailles incones footer*/
@@ -622,6 +623,9 @@ main {
 
 .lingrad1 {
   background: linear-gradient(#FF79DA, #9356DC);
+}
+.lingrad1:hover {
+  background: linear-gradient(#ff88de, #9b63df);
 }
 
 .btn-fonctionnement {

@@ -9,6 +9,11 @@ $colour-white: #fff;
 $colour-black:#000000;
 $colour-font:#000000;
 
+/*Degradés*/
+$lingrad1:linear-gradient($colour-secondary,$colour-primary);
+$ligth :3;      
+$lingrad1-light:linear-gradient(lighten($color: $colour-secondary, $amount: $ligth),lighten($color: $colour-primary, $amount: $ligth)); 
+
 /*valeurs de marge les plus uitlisées*/
 $marginH: 15px;
 $marginV:20px;

@@ -19,8 +19,13 @@
 }
 
 @mixin lingrad1{
-    background: linear-gradient($colour-secondary,$colour-primary);      
+    background: $lingrad1; 
+    &:hover{
+        background: $lingrad1-light;
+    }  
     }
+
+ 
 
 @mixin lingrad-like{
     background: -webkit-linear-gradient($colour-primary, $colour-secondary);
