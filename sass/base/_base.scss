@@ -5,12 +5,14 @@ html,body
     margin: 0px;
     padding: 0px;
    // overflow-x: hidden; 
+
 }
 
 body{   
     background: $colour-white;    
     min-width: 385px; 
 }
+
 .background{
     background: $colour-background;
     
@@ -18,7 +20,9 @@ body{
 
 .spinner{
     z-index: 10;
-    display: flex;
+    display: none;
+    width: 100%;
+    height:100%;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -27,7 +31,7 @@ body{
         bottom: 0px;
         left:0px;
         right:0px;
-     animation: spinner--index ($spin-time + 1ms) 0s step-end forwards;
+   //  animation: spinner--index ($spin-time + 1ms) 0s step-end forwards;
      
 
     &__background{               
@@ -37,20 +41,24 @@ body{
         width: 100%;
         height: 100%;
         //z-index: 10;
-        animation: spinner--background 2.5s 0s cubic-bezier(.71,.21,.58,.97) forwards;
+      //  animation: spinner--background 2.5s 0s cubic-bezier(.71,.21,.58,.97) forwards;
     }
     &__loading{
         position: absolute;
-        animation: spinner--fade 3s 0s linear forwards;
+      //  animation: spinner--fade 3s 0s linear forwards;
 
         &__center{
             font-size: 15rem;
             animation: none;
             color: $colour-primary;
+            @include mobile{
+                font-size: 9rem;
+            }
+
         }
 
         &__rotator{
-            font-size: 6rem;
+            font-size: 8rem;
             display: flex;
             align-items: center;
             position: absolute;
@@ -64,8 +72,12 @@ body{
                 }
                 :nth-child(3){
                 transform: rotate(240deg);
-                }             
-            animation: spinner--rotation 1.9s 0s infinite cubic-bezier(.5,.29,.66,.83) reverse;           
+                }
+                @include mobile{
+                    font-size: 4rem;
+                }               
+          // animation: spinner--rotation 1.9s 0s 3 cubic-bezier(.5,.29,.66,.83) reverse;
+                   
             
             &__container{
                 position: absolute;
