@@ -1,9 +1,7 @@
 .btn{
     cursor: pointer;
-    @include shadow;
-    &:hover{
-        @include shadow--hover;
-    }
+    @include shadow;    
+    
 }
 
 
@@ -21,8 +19,7 @@
 
 
 .btn-rond{
-    @include btn-rond; 
-
+    @include btn-rond;
     @include mobile{   
     padding: 1rem;
     @include top-spacing-marginV;

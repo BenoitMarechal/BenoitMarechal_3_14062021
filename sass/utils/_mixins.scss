@@ -28,9 +28,11 @@
  
 
 @mixin lingrad-like{
+
     background: -webkit-linear-gradient($colour-primary, $colour-secondary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
+
 }
 
 @mixin btn-fonctionnement{
@@ -94,9 +96,9 @@
 
 @mixin shadow{
     box-shadow: 2px 2px 10px -2px $colour-footer;
-}
-@mixin shadow--hover{
-    box-shadow: 4px 4px 20px -2px $colour-footer;
+    &:hover{
+        box-shadow: 4px 4px 20px -2px $colour-footer;
+    }
 }
 
 

@@ -13,6 +13,7 @@ $colour-font:#000000;
 $lingrad1:linear-gradient($colour-secondary,$colour-primary);
 $ligth :3;      
 $lingrad1-light:linear-gradient(lighten($color: $colour-secondary, $amount: $ligth),lighten($color: $colour-primary, $amount: $ligth)); 
+$lingrad-like:linear-gradient($colour-primary,$colour-secondary);
 
 /*valeurs de marge les plus uitlisées*/
 $marginH: 15px;
