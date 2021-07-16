@@ -30,9 +30,11 @@ justify-content: center;
             @include shadow--hover;}
             @include top-spacing-marginV;
             @include bottom-spacing-marginV;
+
+
             @include tablet{            
                 margin: 0px 10% 2*$marginV 10%;
-                width:$vignwidth;
+               max-width:$vignwidth;
                 height: $vignheight;                 
             } 
             

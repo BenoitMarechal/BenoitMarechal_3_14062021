@@ -24,7 +24,7 @@ body{
 .spinner{
     z-index: 10;
 
-    display: none;    
+    display: flex;    
     flex-direction: row;
     justify-content: center;
     align-items: center;
