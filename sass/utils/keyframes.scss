@@ -110,3 +110,13 @@
         transform:translateX($article--height);
     }
 }
+
+@keyframes scale-left{
+    From{
+        transform: scaleX(1);
+    }
+
+    To{
+        transform: scaleX(0.5);
+    }
+}
