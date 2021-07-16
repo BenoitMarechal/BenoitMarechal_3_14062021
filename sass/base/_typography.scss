@@ -10,7 +10,9 @@
   src: url("../../polices/Roboto-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+ /*END FONTS*/ 
 }
+
 body {
   font-family: 'Roboto', Arial;
   
@@ -39,8 +41,37 @@ h2{
   font-weight: bold;  
   }
 
-  .restos__vignette__label__txt__name{
+  .restos__vignette__label__txt__h4{
 font-weight: 900;
   } 
 
-/*END FONTS*/
+/*PAGES MENU*/
+
+.menu__header__h1{
+  font-size: 2.2rem;
+    @include tablet{
+    font-size: 3rem;
+    }
+}
+
+.menu__photo__nom__h2{
+  font-size: 2rem;
+  font-family: 'Shrikhand', 'Roboto', Arial;
+    @include tablet{
+    font-size: 2.8rem;
+    }
+}
+
+.menu__header__a{
+  font-size: $footer-icon-dims*1.8;
+  @include tablet{
+    font-size: 3*$footer-icon-dims;
+  }
+}
+
+.menu__main__menu__section__course__h3{
+  font-family: 'Roboto', Arial;
+  text-transform: uppercase;
+}
+
+

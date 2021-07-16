@@ -28,8 +28,6 @@ justify-content: center;
             @include shadow;
             @include top-spacing-marginV;
             @include bottom-spacing-marginV;
-
-
             @include tablet{            
                 margin: 0px 10% 2*$marginV 10%;
                max-width:$vignwidth;
@@ -67,6 +65,7 @@ justify-content: center;
                 flex-direction: row;
                 justify-content: space-between;
                 align-items:center;
+              
                 border-radius: 0px 0px $vignradius $vignradius;
                 padding: 0px $marginV 0px $marginV; 
 
@@ -76,7 +75,7 @@ justify-content: center;
                    flex-direction: column;
                    justify-content: center;
 
-                   &__name{
+                   &__h4{
                     margin:0px 0px 5px 0px;
                     }                   
                   

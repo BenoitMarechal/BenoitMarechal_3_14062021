@@ -90,3 +90,23 @@
 
 
 }
+
+@keyframes translate-left{
+    From{
+        transform: translateX($article--height);
+    }
+
+    To{
+        transform: translateX(0);
+    }
+}
+
+@keyframes translate-right{
+    From{
+        transform: translateX(0); 
+    }
+
+    To{
+        transform:translateX($article--height);
+    }
+}

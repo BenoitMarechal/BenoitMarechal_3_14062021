@@ -15,7 +15,7 @@ $ligth :3;
 $lingrad1-light:linear-gradient(lighten($color: $colour-secondary, $amount: $ligth),lighten($color: $colour-primary, $amount: $ligth)); 
 $lingrad-like:linear-gradient($colour-primary,$colour-secondary);
 
-/*valeurs de marge les plus uitlisées*/
+/*valeurs de marge les plus utilisées*/
 $marginH: 15px;
 $marginV:20px;
 
@@ -27,6 +27,9 @@ $vignheight: 250px;
 $vignradius: 30px;
 $vignpadding:5px;
 
+/*Dimensions puces*/
+$puceDims: 25px;
+
 /*tailles incones footer*/
 $footer-icon-dims: 15px;
 
@@ -35,6 +38,14 @@ $header-desktop-height: 170px;
 
 /*variables animation*/
 $spin-time: 3s;
+$trans-menu-time:400ms;
+
+
+/*MENUS*/
+$imgheight: 300px;
+$radiusH1: 30px;
+$traitlenght: 50px;
+$article--height: 70px;
 
 
 

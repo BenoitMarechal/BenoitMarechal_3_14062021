@@ -8,14 +8,12 @@
 }
 
 @mixin btn-rond{
-   // width: auto;
-    color:$colour-white; /*faire fonction noir/blanc*/
+    //width: auto;
+    color:$colour-white;
     border-radius: 50rem;
-   /* @include mobile{
-    border-radius: 50rem;
-    }    
-    */
-    
+    @include tablet{
+    border-radius: $radiusH1*0.5;
+    }
 }
 
 @mixin lingrad1{
@@ -49,7 +47,7 @@
     background: $colour-background;
     position: relative;
     &__puce{
-        @include btn-rond;
+        color:$colour-white;
         @include puce;/*voir mixin puce plus bas*/
         }
     
@@ -83,8 +81,9 @@
 }
 
 @mixin puce{
-    width: 25px;
-    height: 25px;
+    width: $puceDims;
+    height: $puceDims;
+    border-radius: 0.5*$puceDims;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,6 +95,7 @@
 
 @mixin shadow{
     box-shadow: 2px 2px 10px -2px $colour-footer;
+    cursor: pointer;
     &:hover{
         box-shadow: 4px 4px 20px -2px $colour-footer;
     }
@@ -117,6 +117,14 @@
 
 @mixin bottom-spacing-marginV{
     margin-bottom: $marginV;
+}
+
+@mixin left-spacing-marginH{
+    margin-left: $marginH;
+}
+
+@mixin right-spacing-marginH{
+    margin-right: $marginH;
 }
 
 @mixin margin-default{
