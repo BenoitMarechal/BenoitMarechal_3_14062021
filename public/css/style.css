@@ -103,12 +103,20 @@
     transform: translateX(70px);
   }
 }
-@keyframes scale-left {
+@keyframes narrow-txt {
   from {
-    transform: scaleX(1);
+    width: calc(100% - 70px);
   }
   to {
-    transform: scaleX(2);
+    width: calc(100% - 120px);
+  }
+}
+@keyframes widen-txt {
+  from {
+    width: calc(100% - 120px);
+  }
+  to {
+    width: calc(100% - 70px);
   }
 }
 html, body {
@@ -621,47 +629,76 @@ main {
   cursor: pointer;
   margin-top: 20px;
   margin-bottom: 20px;
+  /*
+  &::after{
+      display: inline-block;
+      content: 'AFTER';
+      background: grey;
+      opacity: 0.5;
+      height: 100%;
+      width: $end--width;
+      transform-origin: right; 
+
+   //   transform: scaleX(2);
+
+  } 
+  */
+  /*
+  &:hover {
+      &::after{
+          animation: scale-left $trans-menu-time 0s ease-in-out 1 forwards;
+      }
+  }
+  */
 }
 .menu__main__menu__section__choix__article:hover {
   box-shadow: 4px 4px 20px -2px #303030;
-}
-.menu__main__menu__section__choix__article::after {
-  display: flex;
-  content: "AFTER";
-  background: grey;
-  opacity: 0.5;
-  height: 100%;
-  width: 120px;
-  transform-origin: right;
 }
 .menu__main__menu__section__choix__article:hover > .menu__main__menu__section__choix__article__end {
   animation: translate-left 400ms 0s ease-in-out 1 forwards;
 }
 .menu__main__menu__section__choix__article:hover > .menu__main__menu__section__choix__article__end i {
-  animation: spinner--rotation 400ms 100ms ease-in-out 1 forwards;
+  animation: spinner--rotation 400ms 0s ease-in-out 1 forwards;
 }
-.menu__main__menu__section__choix__article:hover::after {
-  animation: scale-left 400ms 0s ease-in-out 1 forwards;
+.menu__main__menu__section__choix__article:hover .menu__main__menu__section__choix__article__txt {
+  animation: narrow-txt 400ms 0s ease-in-out 1 both;
 }
 .menu__main__menu__section__choix__article__txt {
-  display: block;
-  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: calc(100% - 70px);
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  border: blue solid 1px;
   transform-origin: left;
+  animation: widen-txt 400ms 0s ease-in-out forwards;
+  /* pourquoi ça ne marche pas?
+  animation: narrow-txt $trans-menu-time 0s ease-in-out reverse forwards;*/
 }
 .menu__main__menu__section__choix__article__txt__h4 {
-  display: block;
-  margin: 15px 15px 0px 15px;
+  display: inline-block;
+  margin: 15px 5px 0px 15px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  /*
+   &::after{
+       display: inline-block;
+       content: 'AFTER';
+       background: red;
+       opacity: 0.5;
+       height: 100%;
+       width: $end--width;
+       transform-origin: right; 
+   }
+   */
 }
 .menu__main__menu__section__choix__article__txt__p {
-  display: block;
-  margin: 0px 15px 15px 15px;
+  display: inline-block;
+  margin: 0px 5px 15px 15px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;

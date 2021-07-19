@@ -93,55 +93,86 @@
                         @include shadow;
                         @include top-spacing-marginV;
                         @include bottom-spacing-marginV; 
-                         
+                         /*
                         &::after{
-                            display: flex;
+                            display: inline-block;
                             content: 'AFTER';
                             background: grey;
                             opacity: 0.5;
                             height: 100%;
                             width: $end--width;
                             transform-origin: right; 
-                        }  
+                            
+                         //   transform: scaleX(2);
+                        
+                        } 
+                        */
                                         
                         
                             &:hover > &__end{
                                 animation: translate-left $trans-menu-time 0s ease-in-out 1 forwards;
                                 i{
-                                animation: spinner--rotation $trans-menu-time 0.25*$trans-menu-time ease-in-out 1 forwards;
+                                animation: spinner--rotation $trans-menu-time 0s /*0.25*$trans-menu-time*/ ease-in-out 1 forwards;
                                 } 
                             }
                             
+                            &:hover{
+                                .menu__main__menu__section__choix__article__txt{
+                                    animation: narrow-txt $trans-menu-time 0s ease-in-out 1 both;
+
+                                }
+                            }
+                            
+                            
+
+                            /*
                             &:hover {
                                 &::after{
                                     animation: scale-left $trans-menu-time 0s ease-in-out 1 forwards;
                                 }
                             }
+                            */
+                            
                             
                          &__txt{
-                            display: block;
-                         //   flex-wrap: wrap;
-                        //    flex-direction: column;                                        
-                        //   justify-content: space-between;
-                        //    align-items: flex-start;
-                            width: 100%;
+                            display: flex;
+                           flex-wrap: wrap;
+                           flex-direction: row;                                        
+                           justify-content: flex-start;
+                            align-items: center;
+                            width: calc(100% - 70px);
                             overflow: hidden;
                            white-space: nowrap;   
                            text-overflow: ellipsis;                       
-                            border: blue solid 1px;
+                        //    border: blue solid 1px;
                             transform-origin: left;
+                            animation: widen-txt $trans-menu-time 0s ease-in-out forwards;
+                        /* pourquoi ça ne marche pas?
+                        animation: narrow-txt $trans-menu-time 0s ease-in-out reverse forwards;*/
                            
                             &__h4{
-                            display: block;
-                            margin: $marginH $marginH 0px $marginH;
+                            display: inline-block;
+                            margin: $marginH 5px 0px $marginH;
                             overflow: hidden;
                             white-space: nowrap;                               
                             text-overflow: ellipsis;
+                               /*
+                                &::after{
+                                    display: inline-block;
+                                    content: 'AFTER';
+                                    background: red;
+                                    opacity: 0.5;
+                                    height: 100%;
+                                    width: $end--width;
+                                    transform-origin: right; 
+                                }
+                                */
                             }
+                            
 
                             &__p{
-                                display: block;
-                                margin: 0px $marginH $marginH $marginH;
+                                display: inline-block;
+                                margin: 0px 5px $marginH $marginH;
                                 overflow: hidden;
                                 white-space: nowrap;
                                 text-overflow: ellipsis;
@@ -192,4 +223,6 @@
 
     }
 }
+
+
 

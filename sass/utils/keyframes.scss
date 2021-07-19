@@ -124,12 +124,24 @@
     }
 }
 
-@keyframes scale-left{
+@keyframes narrow-txt{
     From{
-        transform: scaleX(1);
+        width: calc(100% - 70px);
+        
     }
 
     To{
-        transform: scaleX(2);
+        width: calc(100% - 120px);
+    }
+}
+
+@keyframes widen-txt{
+    From{
+        width: calc(100% - 120px);
+        
+    }
+
+    To{
+        width: calc(100% - 70px);
     }
 }
