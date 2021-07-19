@@ -101,6 +101,19 @@
     }
 }
 
+@keyframes translate-left2{
+    From{
+        transform: translateX(0); 
+    }
+
+    To{
+        transform:translateX(-1*$article--height);
+    }
+}
+
+
+
+
 @keyframes translate-right{
     From{
         transform: translateX(0); 
@@ -117,6 +130,6 @@
     }
 
     To{
-        transform: scaleX(0.5);
+        transform: scaleX(2);
     }
 }

@@ -89,9 +89,21 @@
                         justify-content: space-between;
                         align-items: center; 
                         overflow: hidden;
+                        position: relative;
                         @include shadow;
                         @include top-spacing-marginV;
-                        @include bottom-spacing-marginV;                      
+                        @include bottom-spacing-marginV; 
+                         
+                        &::after{
+                            display: flex;
+                            content: 'AFTER';
+                            background: grey;
+                            opacity: 0.5;
+                            height: 100%;
+                            width: $end--width;
+                            transform-origin: right; 
+                        }  
+                                        
                         
                             &:hover > &__end{
                                 animation: translate-left $trans-menu-time 0s ease-in-out 1 forwards;
@@ -100,27 +112,25 @@
                                 } 
                             }
                             
-                            &:hover > &__txt{
-                                animation: scale-left $trans-menu-time 0s ease-in-out 1 forwards;}
-                                
-                          
-
+                            &:hover {
+                                &::after{
+                                    animation: scale-left $trans-menu-time 0s ease-in-out 1 forwards;
+                                }
+                            }
                             
-
-                        
-                        &__txt{
+                         &__txt{
                             display: block;
+                         //   flex-wrap: wrap;
                         //    flex-direction: column;                                        
-                        //   justify-content: center;
-                         //   align-items: flex-start;
-                            width: 80%;
+                        //   justify-content: space-between;
+                        //    align-items: flex-start;
+                            width: 100%;
                             overflow: hidden;
-                           white-space: nowrap;                          
+                           white-space: nowrap;   
+                           text-overflow: ellipsis;                       
                             border: blue solid 1px;
                             transform-origin: left;
-
-                            
-
+                           
                             &__h4{
                             display: block;
                             margin: $marginH $marginH 0px $marginH;
@@ -142,8 +152,11 @@
                             display: flex;
                             justify-content: space-between;
                             width: $end--width;
+                        //  width: 20%;
+                            position: absolute;
+                            right: 0px;
                             height: 100%;
-                            transform: translateX($article--height);
+                        //    transform: translateX($article--height);
                             animation: translate-right $trans-menu-time 0s ease-in-out 1 forwards; 
                             
 
