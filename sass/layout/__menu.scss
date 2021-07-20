@@ -63,66 +63,45 @@
         &__btncontainer{
             display: flex;
             width: 100%;
-            justify-content: center;
-            
+            justify-content: center;            
         }
-      
-    
+
     /*menu__main__menu__section__course__h3*/
         &__menu{
+            @include tablet{
+                display: flex;
+                flex-direction: row;
+
+            }
             &__section{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 @include bottom-spacing-marginV;
-                
-                :nth-child(2){
-                    animation-delay: 0s;
-                }
-                :nth-child(3){
-                    animation-delay: 0.2s;
-                }:nth-child(4){
-                    animation-delay: 0.4s;
-                }
-                
-
-                /*
-                :nth-child(2){
-                    animation: article 2*$trans-menu-time 0s ease-in-out forwards;
+                @include delay;
+                @include tablet{
+                   
+                    width: 33%;
+                    @include margin-default;
+                    
                 }
 
-                :nth-child(3){
-                    animation: article 2*$trans-menu-time 0.2s ease-in-out forwards;
-                }
-
-                :nth-child(4){
-                    animation: article 2*$trans-menu-time 0.4s ease-in-out forwards;
-                }
-
-                */
-
-
-
-
+                   
                 &__title-container{
                     display: flex;
                     flex-direction: column;
                     width: 100%;
+                    @include tablet{
+                        width: auto;
+                    }
                     &__h3{
                         margin-top: 0px;
                         padding-bottom: $marginV*0.1; 
                         width: $traitlenght;
                         border-bottom: 4px solid $colour-tertiary;
                         margin-bottom: 5px;
-                                          
                     }
                     
-                    &__trait{
-                        display: none;
-                        height:1px;
-                        width: $traitlenght;
-                        border-bottom: 4px solid $colour-tertiary;
-                    }
                 }
 
             
@@ -192,22 +171,16 @@
                             display: flex;
                             justify-content: space-between;
                             width: $end--width;
-                        
                             position: absolute;
                             right: 0px;
                             height: 100%;
-                        
                             animation: translate-right 0.8*$trans-menu-time 0s ease-in-out  forwards; 
                             
-
-                         //   border:1px solid yellow;
                             &__price{
                                 font-weight: 900;
                                 @include right-spacing-marginH;
                                 display: flex;
-                                align-items: center;
-                                
-                              
+                                align-items: center;  
                             }
 
                             &__icon{

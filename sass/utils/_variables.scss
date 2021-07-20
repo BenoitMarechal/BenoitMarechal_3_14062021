@@ -15,9 +15,10 @@ $ligth :3;
 $lingrad1-light:linear-gradient(lighten($color: $colour-secondary, $amount: $ligth),lighten($color: $colour-primary, $amount: $ligth)); 
 $lingrad-like:linear-gradient($colour-primary,$colour-secondary);
 
-/*valeurs de marge les plus utilisées*/
+/*valeurs de marges les plus utilisées*/
 $marginH: 15px;
 $marginV:20px;
+$margindefault: $marginV $marginH $marginV $marginH;
 
 /*Vignettes resto*/
 
@@ -39,6 +40,7 @@ $header-desktop-height: 170px;
 /*variables animation*/
 $spin-time: 3s;
 $trans-menu-time:500ms;
+$loading-delay: 0.2s;
 
 
 /*MENUS*/

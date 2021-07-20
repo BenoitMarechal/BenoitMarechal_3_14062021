@@ -128,7 +128,8 @@
 }
 
 @mixin margin-default{
-    margin: $marginV $marginH $marginV $marginH;
+    margin: $margindefault;
+    
 }
 
 @mixin ellipsis {
@@ -137,4 +138,17 @@
     text-overflow: ellipsis;
     
 }
+
+
+@mixin delay{
+    @for $i from 2 through 10 {
+        .menu__main__menu__section__article:nth-child(#{$i}n) {
+            animation-delay: #{($i - 2) * 0.2}s;
+        }
+    }   
+        
+    
+}
+
+
 

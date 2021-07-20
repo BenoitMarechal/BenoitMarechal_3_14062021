@@ -29,7 +29,7 @@ justify-content: center;
             @include top-spacing-marginV;
             @include bottom-spacing-marginV;
             @include tablet{            
-                margin: 0px 10% 2*$marginV 10%;
+                margin: 0px 8% 2*$marginV 8%;
                max-width:$vignwidth;
                 height: $vignheight;                 
             } 
