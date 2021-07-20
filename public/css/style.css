@@ -146,14 +146,13 @@
   }
 }
 html, body {
-  width: 100%;
-  height: 100%;
   margin: 0px;
   padding: 0px;
 }
 
 body {
   background: #fff;
+  position: relative;
 }
 
 .background {
@@ -501,51 +500,70 @@ main {
 }
 */
 .spinner {
-  z-index: 10;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: auto;
   position: absolute;
   top: 0px;
   bottom: 0px;
-  left: 0px;
   right: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   animation: spinner--index 3.001s 0s step-end forwards;
 }
-.spinner__background {
+.spinner::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  z-index: 10;
   background: #CECECE;
   opacity: 1;
-  display: flex;
-  width: 100%;
-  height: 100%;
   animation: spinner--background 2.5s 0s cubic-bezier(0.71, 0.21, 0.58, 0.97) forwards;
 }
+.spinner__background {
+  display: none;
+}
 .spinner__loading {
-  position: absolute;
+  z-index: 11;
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
   animation: spinner--fade 3s 0s linear forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left:50%;
+  right:50%;
+  bottom: 50%; 
+  margin: auto;*/
 }
 .spinner__loading__center {
-  font-size: 15rem;
-  animation: none;
+  font-size: 100px;
   color: #9356DC;
+  /*
+         @include mobile{
+             font-size: 90px;
+         }
+    */
 }
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 801px) {
   .spinner__loading__center {
-    font-size: 9rem;
+    font-size: 150px;
   }
 }
 .spinner__loading__rotator {
-  font-size: 8rem;
-  display: flex;
-  align-items: center;
   position: absolute;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  color: #FF79DA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   animation: spinner--rotation 1.9s 0s 3 cubic-bezier(0.5, 0.29, 0.66, 0.83) reverse;
 }
 .spinner__loading__rotator :nth-child(2) {
@@ -554,23 +572,20 @@ main {
 .spinner__loading__rotator :nth-child(3) {
   transform: rotate(240deg);
 }
-@media screen and (max-width: 800px) {
-  .spinner__loading__rotator {
-    font-size: 4rem;
-  }
-}
 .spinner__loading__rotator__container {
   position: absolute;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  display: flex;
-  align-items: center;
 }
-.spinner__loading__rotator__container i {
+.spinner__loading__rotator i {
   position: absolute;
-  left: 110%;
+  font-size: 40px;
+  color: #FF79DA;
+  left: 70px;
+}
+@media screen and (min-width: 801px) {
+  .spinner__loading__rotator i {
+    left: 105px;
+    font-size: 60px;
+  }
 }
 
 .menu__header {
