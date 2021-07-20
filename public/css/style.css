@@ -193,7 +193,7 @@ h2 {
 }
 @media screen and (min-width: 801px) {
   .menu__photo__nom__h2 {
-    font-size: 2.8rem;
+    font-size: 2.3rem;
   }
 }
 
@@ -206,7 +206,7 @@ h2 {
   }
 }
 
-.menu__main__menu__section__course__h3 {
+.menu__main__menu__section__title-container__h3 {
   font-family: "Roboto", Arial;
   text-transform: uppercase;
 }
@@ -567,6 +567,11 @@ main {
   width: 100%;
   height: 300px;
 }
+@media screen and (min-width: 801px) {
+  .menu__photo__imgcontainer {
+    height: 450px;
+  }
+}
 .menu__photo__imgcontainer__img {
   width: 100%;
   height: 100%;
@@ -585,37 +590,53 @@ main {
   padding: 0px 20px 0px 20px;
   /*icone like gérée dans "vignette.scss"*/
 }
+@media screen and (min-width: 801px) {
+  .menu__photo__nom {
+    justify-content: center;
+  }
+}
 .menu__photo__nom__h2 {
   margin-right: 15px;
+}
+@media screen and (min-width: 801px) {
+  .menu__photo__nom__h2 {
+    margin-right: 60px;
+  }
 }
 .menu__main {
   padding-top: 0px 20px 20px 20px;
   /*menu__main__menu__section__course__h3*/
 }
+.menu__main__btncontainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
 .menu__main__menu__section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 20px;
 }
-.menu__main__menu__section__course {
+.menu__main__menu__section__title-container {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-.menu__main__menu__section__course__h3 {
+.menu__main__menu__section__title-container__h3 {
   margin-top: 0px;
-  margin-bottom: 4px;
+  padding-bottom: 2px;
+  width: 50px;
+  border-bottom: 4px solid #99E2D0;
+  margin-bottom: 5px;
 }
-.menu__main__menu__section__course__trait {
+.menu__main__menu__section__title-container__trait {
+  display: none;
   height: 1px;
   width: 50px;
   border-bottom: 4px solid #99E2D0;
 }
-.menu__main__menu__section__choix {
-  width: 100%;
-  margin-top: 20px;
-}
-.menu__main__menu__section__choix__article {
+.menu__main__menu__section__article {
   background: #fff;
   border-radius: 15px;
   display: flex;
@@ -629,96 +650,61 @@ main {
   cursor: pointer;
   margin-top: 20px;
   margin-bottom: 20px;
-  /*
-  &::after{
-      display: inline-block;
-      content: 'AFTER';
-      background: grey;
-      opacity: 0.5;
-      height: 100%;
-      width: $end--width;
-      transform-origin: right; 
-
-   //   transform: scaleX(2);
-
-  } 
-  */
-  /*
-  &:hover {
-      &::after{
-          animation: scale-left $trans-menu-time 0s ease-in-out 1 forwards;
-      }
-  }
-  */
 }
-.menu__main__menu__section__choix__article:hover {
+.menu__main__menu__section__article:hover {
   box-shadow: 4px 4px 20px -2px #303030;
 }
-.menu__main__menu__section__choix__article:hover > .menu__main__menu__section__choix__article__end {
+.menu__main__menu__section__article:hover > .menu__main__menu__section__article__end {
   animation: translate-left 400ms 0s ease-in-out 1 forwards;
 }
-.menu__main__menu__section__choix__article:hover > .menu__main__menu__section__choix__article__end i {
-  animation: spinner--rotation 400ms 0s ease-in-out 1 forwards;
+.menu__main__menu__section__article:hover > .menu__main__menu__section__article__end i {
+  animation: spinner--rotation 400ms 100ms ease-in-out 1 forwards;
 }
-.menu__main__menu__section__choix__article:hover .menu__main__menu__section__choix__article__txt {
-  animation: narrow-txt 400ms 0s ease-in-out 1 both;
+.menu__main__menu__section__article:hover .menu__main__menu__section__choix__article__txt {
+  animation: narrow-txt 400ms 0s ease-in-out 1 forwards;
 }
-.menu__main__menu__section__choix__article__txt {
+.menu__main__menu__section__article__txt {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  width: calc(100% - 70px);
+  width: calc(100% - 120px);
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  transform-origin: left;
   animation: widen-txt 400ms 0s ease-in-out forwards;
-  /* pourquoi ça ne marche pas?
-  animation: narrow-txt $trans-menu-time 0s ease-in-out reverse forwards;*/
+  margin-left: 15px;
+  /*pourquoi ça ne marche pas?*/
 }
-.menu__main__menu__section__choix__article__txt__h4 {
-  display: inline-block;
-  margin: 15px 5px 0px 15px;
+.menu__main__menu__section__article__txt__h4 {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  /*
-   &::after{
-       display: inline-block;
-       content: 'AFTER';
-       background: red;
-       opacity: 0.5;
-       height: 100%;
-       width: $end--width;
-       transform-origin: right; 
-   }
-   */
+  margin-top: 6px;
+  margin-bottom: 6px;
+  width: 100%;
 }
-.menu__main__menu__section__choix__article__txt__p {
-  display: inline-block;
-  margin: 0px 5px 15px 15px;
+.menu__main__menu__section__article__txt__p {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.menu__main__menu__section__choix__article__end {
+.menu__main__menu__section__article__end {
   display: flex;
   justify-content: space-between;
   width: 120px;
   position: absolute;
   right: 0px;
   height: 100%;
-  animation: translate-right 400ms 0s ease-in-out 1 forwards;
+  animation: translate-right 400ms 0s ease-in-out forwards;
 }
-.menu__main__menu__section__choix__article__end__price {
+.menu__main__menu__section__article__end__price {
   font-weight: 900;
   margin-right: 15px;
   display: flex;
   align-items: center;
 }
-.menu__main__menu__section__choix__article__end__icon {
+.menu__main__menu__section__article__end__icon {
   display: flex;
   background: #99E2D0;
   color: #fff;

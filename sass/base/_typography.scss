@@ -58,7 +58,7 @@ font-weight: 900;
   font-size: 2rem;
   font-family: 'Shrikhand', 'Roboto', Arial;
     @include tablet{
-    font-size: 2.8rem;
+    font-size: 2.3rem;
     }
 }
 
@@ -69,7 +69,7 @@ font-weight: 900;
   }
 }
 
-.menu__main__menu__section__course__h3{
+.menu__main__menu__section__title-container__h3{
   font-family: 'Roboto', Arial;
   text-transform: uppercase;
 }

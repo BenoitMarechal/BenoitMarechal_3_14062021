@@ -1,7 +1,7 @@
 .menu{
     &__header{
         display: flex;
-       // justify-content: space-between;
+       
         align-items: center;
         &__a{
             margin: 0px $marginH 0px $marginH;
@@ -12,19 +12,19 @@
             display: flex;
             width: 100%;
             justify-content: center;
+            
         }
     }
 
     &__photo{
       position: relative;
-    //  display: flex;
-   //   flex-direction: column;
- //     flex-wrap: wrap;
-      
-    //  width: 100%;
+    
         &__imgcontainer{
            width: 100%;   
            height: $imgheight;
+           @include tablet{
+               height: 1.5*$imgheight;
+           }
             
             &__img{
                 width: 100%;
@@ -44,9 +44,15 @@
             border-radius: $radiusH1 $radiusH1 0px 0px;
             padding: 0px $marginV 0px $marginV;            
             /*icone like gérée dans "vignette.scss"*/
+            @include tablet{
+                justify-content: center;
+            }
 
             &__h2{
              @include right-spacing-marginH;
+             @include tablet{
+                 margin-right: 3*$marginV;
+             }
             }
             
         }
@@ -54,6 +60,12 @@
 
     &__main{
         padding-top: 0px $marginV $marginV $marginV;
+        &__btncontainer{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            
+        }
       
     
     /*menu__main__menu__section__course__h3*/
@@ -62,24 +74,29 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                &__course{
+                @include bottom-spacing-marginV;
+                &__title-container{
                     display: flex;
                     flex-direction: column;
                     width: 100%;
                     &__h3{
                         margin-top: 0px;
-                        margin-bottom: $marginV*0.2;                        
+                        padding-bottom: $marginV*0.1; 
+                        width: $traitlenght;
+                        border-bottom: 4px solid $colour-tertiary;
+                        margin-bottom: 5px;
+                                          
                     }
+                    
                     &__trait{
+                        display: none;
                         height:1px;
                         width: $traitlenght;
                         border-bottom: 4px solid $colour-tertiary;
                     }
                 }
 
-                &__choix{
-                    width: 100%;
-                    @include top-spacing-marginV;
+            
                     &__article{
                         background: $colour-white;
                         border-radius: $vignradius*0.5;
@@ -93,89 +110,46 @@
                         @include shadow;
                         @include top-spacing-marginV;
                         @include bottom-spacing-marginV; 
-                         /*
-                        &::after{
-                            display: inline-block;
-                            content: 'AFTER';
-                            background: grey;
-                            opacity: 0.5;
-                            height: 100%;
-                            width: $end--width;
-                            transform-origin: right; 
-                            
-                         //   transform: scaleX(2);
-                        
-                        } 
-                        */
-                                        
+                                                               
                         
                             &:hover > &__end{
                                 animation: translate-left $trans-menu-time 0s ease-in-out 1 forwards;
                                 i{
-                                animation: spinner--rotation $trans-menu-time 0s /*0.25*$trans-menu-time*/ ease-in-out 1 forwards;
+                                animation: spinner--rotation $trans-menu-time /*0s*/ 0.25*$trans-menu-time ease-in-out 1 forwards;
                                 } 
                             }
                             
                             &:hover{
                                 .menu__main__menu__section__choix__article__txt{
-                                    animation: narrow-txt $trans-menu-time 0s ease-in-out 1 both;
+                                    animation: narrow-txt $trans-menu-time 0s ease-in-out 1 forwards;
 
                                 }
                             }
                             
-                            
-
-                            /*
-                            &:hover {
-                                &::after{
-                                    animation: scale-left $trans-menu-time 0s ease-in-out 1 forwards;
-                                }
-                            }
-                            */
                             
                             
                          &__txt{
                             display: flex;
-                           flex-wrap: wrap;
-                           flex-direction: row;                                        
+                            flex-wrap: wrap;
+                                                                
                            justify-content: flex-start;
                             align-items: center;
-                            width: calc(100% - 70px);
-                            overflow: hidden;
-                           white-space: nowrap;   
-                           text-overflow: ellipsis;                       
-                        //    border: blue solid 1px;
-                            transform-origin: left;
+                            width: calc(100% - 120px);
+                            @include ellipsis;
                             animation: widen-txt $trans-menu-time 0s ease-in-out forwards;
-                        /* pourquoi ça ne marche pas?
-                        animation: narrow-txt $trans-menu-time 0s ease-in-out reverse forwards;*/
+                            @include left-spacing-marginH;
+                         /*pourquoi ça ne marche pas?*/
+                       // animation: narrow-txt $trans-menu-time 0s ease-in-out reverse forwards;
                            
                             &__h4{
-                            display: inline-block;
-                            margin: $marginH 5px 0px $marginH;
-                            overflow: hidden;
-                            white-space: nowrap;                               
-                            text-overflow: ellipsis;
-                               /*
-                                &::after{
-                                    display: inline-block;
-                                    content: 'AFTER';
-                                    background: red;
-                                    opacity: 0.5;
-                                    height: 100%;
-                                    width: $end--width;
-                                    transform-origin: right; 
-                                }
-                                */
-                            }
+                            @include ellipsis;
+                            margin-top: $marginV*0.3;
+                            margin-bottom: $marginV*0.3;
+                            width: 100%;                           
                             
-
+                            }
                             &__p{
-                                display: inline-block;
-                                margin: 0px 5px $marginH $marginH;
-                                overflow: hidden;
-                                white-space: nowrap;
-                                text-overflow: ellipsis;
+                            @include ellipsis;                                
                             }
 
                         }
@@ -183,12 +157,12 @@
                             display: flex;
                             justify-content: space-between;
                             width: $end--width;
-                        //  width: 20%;
+                        
                             position: absolute;
                             right: 0px;
                             height: 100%;
-                        //    transform: translateX($article--height);
-                            animation: translate-right $trans-menu-time 0s ease-in-out 1 forwards; 
+                        
+                            animation: translate-right $trans-menu-time 0s ease-in-out  forwards; 
                             
 
                          //   border:1px solid yellow;
@@ -198,19 +172,18 @@
                                 display: flex;
                                 align-items: center;
                                 
-                              //  border:1px solid green;
+                              
                             }
 
                             &__icon{
-                              //  border:1px solid blue;
+                              
                                 display: flex;
                                 background: $colour-tertiary;
                                 color: $colour-white;
                                 align-items: center;
                                 justify-content: center;
                                 width: $article--height;
-                             //   padding-left: $article--height*0.25;
-                             //   padding-right: $article--height*0.25;
+                             
                                 font-size: 2rem;
                                 border-radius: 0px $vignradius*0.5 $vignradius*0.5 0px;                                
                                 
@@ -222,7 +195,7 @@
         }
 
     }
-}
+
 
 
 
