@@ -131,17 +131,39 @@
     }
 
     To{
-        width: calc(100% - 120px);
+        width: calc(100% - 145px);
     }
 }
 
 @keyframes widen-txt{
     From{
-        width: calc(100% - 120px);
+        width: calc(100% - 145px);
         
     }
 
     To{
         width: calc(100% - 70px);
+    }
+}
+
+@keyframes article{
+    0%{
+        opacity: 0;
+        transform: scaleY($article--scaleY);
+    }
+
+    
+
+    50%{
+        opacity: 0;        
+    }
+
+    75%{
+        opacity: 0.2;
+    }
+
+    100%{
+        opacity: 1;
+        transform: scaleY(1);
     }
 }
