@@ -59,7 +59,7 @@
     }
 
     &__main{
-        padding-top: 0px $marginV $marginV $marginV;
+        
         &__btncontainer{
             display: flex;
             width: 100%;
@@ -159,12 +159,11 @@
                             @include ellipsis;
                             margin-top: $marginV*0.3;
                             margin-bottom: $marginV*0.3;
-                            width: 100%;                           
-                            
+                            width: 100%;                        
                             }
                             &__p{
                             @include ellipsis;                                
-                            }
+                                }
 
                         }
                         &__end{
@@ -191,7 +190,6 @@
                                 align-items: center;
                                 justify-content: center;
                                 width: $article--height;
-                             
                                 font-size: 2rem;
                                 border-radius: 0px $vignradius*0.5 $vignradius*0.5 0px;                                
                                 
