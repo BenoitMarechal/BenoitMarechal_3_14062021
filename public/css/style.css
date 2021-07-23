@@ -387,30 +387,6 @@ h2 {
 }
 
 .spinner {
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  right: 0px;
-  left: 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: spinner--index 3.001s 0s step-end forwards;
-}
-.spinner::before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  right: 0px;
-  left: 0px;
-  z-index: 10;
-  background: #CECECE;
-  opacity: 1;
-  animation: spinner--background 2.5s 0s cubic-bezier(0.71, 0.21, 0.58, 0.97) forwards;
-}
-.spinner__loading {
-  z-index: 11;
   position: fixed;
   top: 0px;
   bottom: 0px;
@@ -421,36 +397,48 @@ h2 {
   align-items: center;
   font-size: 100px;
   color: #9356DC;
+  animation: spinner--index 3.001s 0s step-end forwards;
 }
 @media screen and (min-width: 801px) {
-  .spinner__loading {
+  .spinner {
     font-size: 150px;
   }
 }
-.spinner__loading__rotator {
+.spinner::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  background: #CECECE;
+  animation: spinner--background 2.5s 0s cubic-bezier(0.71, 0.21, 0.58, 0.97) forwards;
+  z-index: -1;
+}
+.spinner__rotator {
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   animation: spinner--rotation 1.9s 0s 3 cubic-bezier(0.5, 0.29, 0.66, 0.83) reverse;
 }
-.spinner__loading__rotator :nth-child(2) {
+.spinner__rotator :nth-child(2) {
   transform: rotate(120deg);
 }
-.spinner__loading__rotator :nth-child(3) {
+.spinner__rotator :nth-child(3) {
   transform: rotate(240deg);
 }
-.spinner__loading__rotator__container {
+.spinner__rotator__container {
   position: absolute;
 }
-.spinner__loading__rotator i {
+.spinner__rotator__container__icon {
   position: absolute;
   font-size: 40px;
   color: #FF79DA;
   left: 70px;
 }
 @media screen and (min-width: 801px) {
-  .spinner__loading__rotator i {
+  .spinner__rotator__container__icon {
     left: 105px;
     font-size: 60px;
   }
