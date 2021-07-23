@@ -37,17 +37,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
-
-      
-        
-        &__center{
-            font-size: 100px;
-            color: $colour-primary;      
-       
+        font-size: 100px;
+            color: $colour-primary; 
        @include tablet{
            font-size: 150px;
        }
-        }
+
 
         &__rotator{  
         position: absolute;       

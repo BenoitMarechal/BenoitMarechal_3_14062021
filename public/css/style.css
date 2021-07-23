@@ -430,13 +430,11 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.spinner__loading__center {
   font-size: 100px;
   color: #9356DC;
 }
 @media screen and (min-width: 801px) {
-  .spinner__loading__center {
+  .spinner__loading {
     font-size: 150px;
   }
 }
