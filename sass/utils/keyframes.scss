@@ -1,3 +1,5 @@
+/*ANIMATIONS LIKE*/
+
 @keyframes like--empty{
     0%{
         opacity: 1;
@@ -17,7 +19,7 @@
 @keyframes like--full{
     0%{
         transform: scaleY(0);
-       transform-origin: bottom;
+     
         opacity: 0;
     }
 
@@ -27,6 +29,9 @@
     }
 }
 
+/*FIN ANIMATIONS LIKE*/
+
+/*ANIMATIONS SPINNER*/
 
 @keyframes spinner--index {
     0%{
@@ -67,30 +72,13 @@
 
     to{
         
-        transform: rotate(360deg);
-                        
+        transform: rotate(360deg);                        
     }
-
 }
 
-@keyframes spinner--fade{
-    0%{
-        
-        opacity: 1;
-    }
-
-    99%{
-        opacity: 1;
-    }   
-
-    100%{
-        
-        opacity: 0; 
-               
-    }
+/*FIN ANIMATIONS SPINNER*/
 
 
-}
 
 @keyframes translate-left{
     From{
@@ -111,22 +99,6 @@
         transform:translateX($article--height);
     }
 }
-/*
-@keyframes translate-left2{
-    From{
-        transform: translateX(0); 
-    }
-
-    To{
-        transform:translateX(-1*$article--height);
-    }
-}
-*/
-
-
-
-
-
 
 @keyframes narrow-txt{
     From{

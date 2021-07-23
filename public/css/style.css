@@ -8,28 +8,7 @@
 /*hauteur header desktop*/
 /*variables animation*/
 /*MENUS*/
-/*
-@function colorcomp($colour){
-
-    $comp:adjust-hue($colour, 60deg);
-
-    @return $comp;
-
-  }
-
-
-
-
-
-@function delay($n){
-  $n:1
-
-
-}
-
-}
-
-*/
+/*ANIMATIONS LIKE*/
 @keyframes like--empty {
   0% {
     opacity: 1;
@@ -44,13 +23,14 @@
 @keyframes like--full {
   0% {
     transform: scaleY(0);
-    transform-origin: bottom;
     opacity: 0;
   }
   100% {
     transform: scaleY(1);
   }
 }
+/*FIN ANIMATIONS LIKE*/
+/*ANIMATIONS SPINNER*/
 @keyframes spinner--index {
   0% {
     z-index: 10;
@@ -78,17 +58,7 @@
     transform: rotate(360deg);
   }
 }
-@keyframes spinner--fade {
-  0% {
-    opacity: 1;
-  }
-  99% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
+/*FIN ANIMATIONS SPINNER*/
 @keyframes translate-left {
   from {
     transform: translateX(70px);
@@ -105,17 +75,6 @@
     transform: translateX(70px);
   }
 }
-/*
-@keyframes translate-left2{
-    From{
-        transform: translateX(0); 
-    }
-
-    To{
-        transform:translateX(-1*$article--height);
-    }
-}
-*/
 @keyframes narrow-txt {
   from {
     width: calc(100% - 70px);
@@ -248,16 +207,6 @@ h2 {
   text-align: center;
   padding: 0px;
   margin: 0px;
-  /*
-      &__btn{
-          @include tablet{
-              height: $header-desktop-height;
-              width: 25%;
-              border-radius: 15px;
-          }
-      }
-
-   */
 }
 @media screen and (min-width: 801px) {
   .header {
@@ -295,7 +244,6 @@ h2 {
     width: auto;
     position: absolute;
     top: 20px;
-    /*left: 50%*/
   }
 }
 .header__location {
@@ -375,10 +323,6 @@ h2 {
   }
 }
 
-main {
-  padding: 20px 15px 20px 15px;
-}
-
 .footer {
   background: #303030;
   color: #fff;
@@ -442,66 +386,6 @@ main {
   }
 }
 
-/*
-
-.footer{
-    background: $colour-footer;    
-    width: 100%;
-    color:$colour-white;
-    font-weight: normal;        
-
-    &__content{
-        margin-left: $marginH;
-        @include top-spacing-marginV;
-        @include bottom-spacing-marginV;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        @include tablet{
-            margin: 0px;
-        }
-            &__logo{
-                display: flex;
-                width: auto;
-                    @include tablet{
-                    transform: scale(2.2);
-                    padding-bottom: $marginV*0.5;
-                    padding-top: $marginV*0.5;            
-                    }
-            }
-    & i{
-        margin-right: 10px;
-        width:$marginH ;
-        height: $marginH ;
-            }    
-    &__ul{
-        display: flex;
-        flex-direction: column;
-        margin: 0px;
-        padding: 0px;
-            @include tablet{
-                flex-direction: row;
-                flex-wrap: wrap;
-                width: 100%;
-                justify-content: space-between;
-                }
-                            &__li{
-
-                                    margin: 0px 0px ($marginV*0.5) 0px; 
-                                    list-style-type: none; 
-                                        @include tablet{
-                                            display: flex;
-                                            width: 50%;
-                                            justify-content: center;
-                                            transform: scale(1.5);
-                                            padding-bottom: $marginV;
-                                            }    
-
-                                }
-            }
-        }        
-}
-*/
 .spinner {
   position: absolute;
   top: 0px;
@@ -520,47 +404,31 @@ main {
   bottom: 0px;
   right: 0px;
   left: 0px;
-  z-index: 10;
   background: #CECECE;
-  opacity: 1;
   animation: spinner--background 2.5s 0s cubic-bezier(0.71, 0.21, 0.58, 0.97) forwards;
 }
-.spinner__background {
-  display: none;
-}
 .spinner__loading {
-  z-index: 11;
   position: fixed;
   top: 0px;
   bottom: 0px;
   right: 0px;
   left: 0px;
-  animation: spinner--fade 3s 0s linear forwards;
   display: flex;
   justify-content: center;
   align-items: center;
-  /*
-  width: 100px;
-  height: 100px;
-  top: 50%;
-  left:50%;
-  right:50%;
-  bottom: 50%; 
-  margin: auto;*/
-}
-.spinner__loading__center {
   font-size: 100px;
   color: #9356DC;
-  /*
-         @include mobile{
-             font-size: 90px;
-         }
-    */
 }
 @media screen and (min-width: 801px) {
-  .spinner__loading__center {
+  .spinner__loading {
     font-size: 150px;
   }
+}
+.spinner__loading__center {
+  /*
+  @include tablet{
+      font-size: 150px;
+  }*/
 }
 .spinner__loading__rotator {
   position: absolute;
@@ -647,9 +515,6 @@ main {
     margin-right: 60px;
   }
 }
-.menu__main {
-  /*menu__main__menu__section__course__h3*/
-}
 .menu__main__btncontainer {
   display: flex;
   width: 100%;
@@ -667,31 +532,31 @@ main {
   align-items: center;
   margin-bottom: 20px;
 }
-.menu__main__menu__section .menu__main__menu__section__article:nth-child(2n) {
+.menu__main__menu__section .menu__main__menu__section__article:nth-child(2) {
   animation-delay: 0s;
 }
-.menu__main__menu__section .menu__main__menu__section__article:nth-child(3n) {
+.menu__main__menu__section .menu__main__menu__section__article:nth-child(3) {
   animation-delay: 0.2s;
 }
-.menu__main__menu__section .menu__main__menu__section__article:nth-child(4n) {
+.menu__main__menu__section .menu__main__menu__section__article:nth-child(4) {
   animation-delay: 0.4s;
 }
-.menu__main__menu__section .menu__main__menu__section__article:nth-child(5n) {
+.menu__main__menu__section .menu__main__menu__section__article:nth-child(5) {
   animation-delay: 0.6s;
 }
-.menu__main__menu__section .menu__main__menu__section__article:nth-child(6n) {
+.menu__main__menu__section .menu__main__menu__section__article:nth-child(6) {
   animation-delay: 0.8s;
 }
-.menu__main__menu__section .menu__main__menu__section__article:nth-child(7n) {
+.menu__main__menu__section .menu__main__menu__section__article:nth-child(7) {
   animation-delay: 1s;
 }
-.menu__main__menu__section .menu__main__menu__section__article:nth-child(8n) {
+.menu__main__menu__section .menu__main__menu__section__article:nth-child(8) {
   animation-delay: 1.2s;
 }
-.menu__main__menu__section .menu__main__menu__section__article:nth-child(9n) {
+.menu__main__menu__section .menu__main__menu__section__article:nth-child(9) {
   animation-delay: 1.4s;
 }
-.menu__main__menu__section .menu__main__menu__section__article:nth-child(10n) {
+.menu__main__menu__section .menu__main__menu__section__article:nth-child(10) {
   animation-delay: 1.6s;
 }
 @media screen and (min-width: 801px) {
@@ -716,6 +581,11 @@ main {
   width: 50px;
   border-bottom: 4px solid #99E2D0;
   margin-bottom: 5px;
+}
+@media screen and (min-width: 801px) {
+  .menu__main__menu__section__title-container__h3 {
+    width: auto;
+  }
 }
 .menu__main__menu__section__article {
   background: #fff;
@@ -753,13 +623,11 @@ main {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-  width: calc(100% - 145px);
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   animation: widen-txt 500ms 0s ease-in-out forwards;
   margin-left: 15px;
-  /*pourquoi ça ne marche pas?*/
 }
 .menu__main__menu__section__article__txt__h4 {
   overflow: hidden;
@@ -798,6 +666,10 @@ main {
   width: 70px;
   font-size: 2rem;
   border-radius: 0px 15px 15px 0px;
+}
+
+main {
+  padding: 20px 15px 20px 15px;
 }
 
 .restos {
@@ -910,7 +782,6 @@ main {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: absolute;
-  transform-origin: bottom;
   top: 0px;
   bottom: 0px;
   right: 0px;
@@ -918,12 +789,6 @@ main {
   opacity: 1;
   z-index: 2;
   transform: scaleY(0);
-  /*
-  animation-name: like--full;
-  animation-duration:  400ms;                                               
-  animation-play-state: paused;
-  animation-fill-mode: forwards;
-  */
 }
 
 .btn {
@@ -974,11 +839,7 @@ main {
 
 .btn-fonctionnement {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
   align-items: center;
-  width: auto;
   margin: 10px 50px 20px 50px;
   font-size: 0.9rem;
   padding: 20px 0px 20px 0px;
@@ -998,7 +859,6 @@ main {
   left: -13px;
   margin: 0px;
   background: #9356DC;
-  /*voir mixin puce plus bas*/
 }
 .btn-fonctionnement__icon {
   color: #CECECE;
@@ -1007,11 +867,6 @@ main {
 }
 .btn-fonctionnement__txt {
   margin: 0px 15px 0px 15px;
-}
-@media screen and (min-width: 801px) {
-  .btn-fonctionnement__txt {
-    display: flex;
-  }
 }
 .btn-fonctionnement:hover {
   background: #e4d5f6;

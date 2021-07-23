@@ -1,58 +1,59 @@
+main{
+    padding: $marginV $marginH $marginV $marginH;
+}
+
 .restos{
-    display: flex;
+display: flex;
 width: auto;
 flex-direction: column;
 flex-wrap: nowrap;
 align-items: center;
 justify-content: center;
-        @include tablet{
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-content: center;
-        }
+    @include tablet{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
 
-        & h2{
-            display: flex;
-            width: 100%;            
-        }
+    & h2{
+        display: flex;
+        width: 100%;            
+    }
 
-        &__vignette{
-        //    width:$vignwidth*0.8;
-            height: $vignheight;
-            width: 100%;
-            //max-height: 320px;
-            display: flex;
-            flex-direction: column;
-            border-radius: $vignradius;
-            @include shadow;
-            @include top-spacing-marginV;
-            @include bottom-spacing-marginV;
+    &__vignette{
+        height: $vignheight;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border-radius: $vignradius;
+        @include shadow;
+        @include top-spacing-marginV;
+        @include bottom-spacing-marginV;
             @include tablet{            
                 margin: 0px 8% 2*$marginV 8%;
-               max-width:$vignwidth;
+                max-width:$vignwidth;
                 height: $vignheight;                 
             } 
             
-            &__imgcontainer{
-                height: 70%;
-                position: relative;
+        &__imgcontainer{
+            height: 70%;
+            position: relative;
+            border-radius: $vignradius $vignradius 0px 0px;
+                
+            &__image{
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
                 border-radius: $vignradius $vignradius 0px 0px;
-                
-                &__image{
-                    object-fit: cover;
-                    width: 100%;
-                     height: 100%;
-                     border-radius: $vignradius $vignradius 0px 0px;
-                
                 }
 
-                &__nouveau{
-                    display: block;
-                    @include nouveau;
-                    position: absolute;
-                   right: 5%;
-                   top: 15%;
+            &__nouveau{
+                display: block;
+                @include nouveau;
+                position: absolute;
+                right: 5%;
+                top: 15%;
                     &--none{
                         display: none;
                     }                
@@ -88,6 +89,7 @@ justify-content: center;
                     position: relative;
                     z-index: 1;
                     cursor: pointer;
+                 //   transform-origin: bottom;
 
                     &:hover > &--full{
                     animation: like--full 400ms 0s forwards;  
@@ -100,27 +102,20 @@ justify-content: center;
                         color: $colour-inactive;
                         opacity: 1;
                         z-index: 1;
-                      //  background: $colour-background;
-                        //animation: like--empty 400ms 0s paused forwards;                         
+                                             
                     }
 
                     &--full{
                         @include lingrad-like;
                         position: absolute;
-                        transform-origin: bottom;
+                      
                         top:0px;
                         bottom: 0px;
                         right: 0px;
                         left: 0px;                        
                         opacity: 1;
                         z-index: 2;                        
-                        transform: scaleY(0);
-                        /*
-                        animation-name: like--full;
-                        animation-duration:  400ms;                                               
-                        animation-play-state: paused;
-                        animation-fill-mode: forwards;
-                        */
+                        transform: scaleY(0);                        
                         
                     }
                     

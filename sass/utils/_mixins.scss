@@ -8,7 +8,6 @@
 }
 
 @mixin btn-rond{
-    //width: auto;
     color:$colour-white;
     border-radius: 50rem;
     @include tablet{
@@ -20,7 +19,7 @@
     background: $lingrad1; 
     &:hover{
         background: $lingrad1-light;
-    }  
+        }  
     }
 
  
@@ -34,12 +33,9 @@
 }
 
 @mixin btn-fonctionnement{
-    display: flex;
-    flex-direction: row;
-    flex-wrap:nowrap;
-    justify-content: flex-start;
+    display: flex;    
     align-items: center;
-    width: auto;
+    
     margin:10px 50px 20px 50px;    
     font-size: 0.9rem;
     padding: 20px 0px 20px 0px;
@@ -48,7 +44,7 @@
     position: relative;
     &__puce{
         color:$colour-white;
-        @include puce;/*voir mixin puce plus bas*/
+        @include puce;
         }
     
     &__icon{
@@ -59,10 +55,6 @@
     
     &__txt{
         margin: 0px $marginH 0px $marginH;
-
-        @include tablet{
-            display: flex;
-        }
         }
 
     &:hover{ 
@@ -129,25 +121,21 @@
 
 @mixin margin-default{
     margin: $margindefault;
-    
 }
 
 @mixin ellipsis {
     overflow: hidden;
     white-space: nowrap;                               
     text-overflow: ellipsis;
-    
 }
 
 
 @mixin delay{
     @for $i from 2 through 10 {
-        .menu__main__menu__section__article:nth-child(#{$i}n) {
+        .menu__main__menu__section__article:nth-child(#{$i}) {
             animation-delay: #{($i - 2) * 0.2}s;
         }
-    }   
-        
-    
+    }    
 }
 
 
