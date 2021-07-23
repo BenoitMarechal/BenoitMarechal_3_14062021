@@ -49,17 +49,16 @@ justify-content: center;
                 
                 }
 
-                &__nouveau{
-                 
+                &__nouveau{                 
                     @include nouveau;
                     position: absolute;
                    right: 5%;
                    top: 15%;
                    &--block{
                     display: block;
-                }
-                     &--none{
-                        display: none;
+                    }
+                    &--none{
+                    display: none;
                     }                
                 }
             }
