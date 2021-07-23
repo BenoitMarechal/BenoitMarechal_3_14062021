@@ -1,7 +1,12 @@
 .fonctionnement{
     background: $colour-white;
     padding-bottom: 20px;
+    padding-top: 20px;
     margin: 0px $marginH 0px $marginH;
+
+    &__h2{
+        margin-top: 0px;
+    }
 
 
     &__btncontainer{

@@ -41,23 +41,17 @@
 
 
 @keyframes spinner--background{
-    0%{
-        
-        opacity: 1;
-                
+    0%{        
+        opacity: 1;                
     }
 
     80%{
         opacity: 0.9;
     }    
 
-    100%{
-        
-        opacity: 0;         
-               
+    100%{        
+        opacity: 0;
     }
-
-
 }
 
 @keyframes spinner--rotation{
@@ -70,25 +64,6 @@
         transform: rotate(360deg);
                         
     }
-
-}
-
-@keyframes spinner--fade{
-    0%{
-        
-        opacity: 1;
-    }
-
-    99%{
-        opacity: 1;
-    }   
-
-    100%{
-        
-        opacity: 0; 
-               
-    }
-
 
 }
 
@@ -111,12 +86,6 @@
         transform:translateX($article--height);
     }
 }
-
-
-
-
-
-
 
 @keyframes narrow-txt{
     From{
