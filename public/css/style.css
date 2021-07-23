@@ -592,6 +592,11 @@ h2 {
   border-bottom: 4px solid #99E2D0;
   margin-bottom: 5px;
 }
+@media screen and (min-width: 801px) {
+  .menu__main__menu__section__title-container__h3 {
+    width: auto;
+  }
+}
 .menu__main__menu__section__article {
   background: #fff;
   border-radius: 15px;
