@@ -50,12 +50,15 @@ justify-content: center;
                 }
 
                 &__nouveau{
-                    display: block;
+                 
                     @include nouveau;
                     position: absolute;
                    right: 5%;
                    top: 15%;
-                    &--none{
+                   &--block{
+                    display: block;
+                }
+                     &--none{
                         display: none;
                     }                
                 }
