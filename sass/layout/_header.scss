@@ -42,6 +42,12 @@ margin:0px;
     
 
     &__location{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        margin: 0px;
         
         width: 100%;
         flex-direction:row;
@@ -75,20 +81,22 @@ margin:0px;
 
 
     &__accroche{
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        text-align: center;
         
         width: auto;
         @include top-spacing-marginV;
 
         @include tablet{
+            position: relative;
             flex-flow: column-reverse nowrap;
             justify-content: flex-start;
             width: 50%;
             height: 100%;
            margin: 0px;
-           padding: 0px;
-           
-            
-            
+           padding: 0px;    
         }
         
         
