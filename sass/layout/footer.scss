@@ -66,66 +66,7 @@
 
 
 
-/*
 
-.footer{
-    background: $colour-footer;    
-    width: 100%;
-    color:$colour-white;
-    font-weight: normal;        
-
-    &__content{
-        margin-left: $marginH;
-        @include top-spacing-marginV;
-        @include bottom-spacing-marginV;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        @include tablet{
-            margin: 0px;
-        }
-            &__logo{
-                display: flex;
-                width: auto;
-                    @include tablet{
-                    transform: scale(2.2);
-                    padding-bottom: $marginV*0.5;
-                    padding-top: $marginV*0.5;            
-                    }
-            }
-    & i{
-        margin-right: 10px;
-        width:$marginH ;
-        height: $marginH ;
-            }    
-    &__ul{
-        display: flex;
-        flex-direction: column;
-        margin: 0px;
-        padding: 0px;
-            @include tablet{
-                flex-direction: row;
-                flex-wrap: wrap;
-                width: 100%;
-                justify-content: space-between;
-                }
-                            &__li{
-                            
-                                    margin: 0px 0px ($marginV*0.5) 0px; 
-                                    list-style-type: none; 
-                                        @include tablet{
-                                            display: flex;
-                                            width: 50%;
-                                            justify-content: center;
-                                            transform: scale(1.5);
-                                            padding-bottom: $marginV;
-                                            }    
-                            
-                                }
-            }
-        }        
-}
-*/
 
 
 

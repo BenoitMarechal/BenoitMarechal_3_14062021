@@ -8,28 +8,6 @@
 /*hauteur header desktop*/
 /*variables animation*/
 /*MENUS*/
-/*
-@function colorcomp($colour){
-
-    $comp:adjust-hue($colour, 60deg);
-
-    @return $comp;
-
-  }
-
-
-
-
-
-@function delay($n){
-  $n:1
-
-
-}
-
-}
-
-*/
 @keyframes like--empty {
   0% {
     opacity: 1;
@@ -105,17 +83,6 @@
     transform: translateX(70px);
   }
 }
-/*
-@keyframes translate-left2{
-    From{
-        transform: translateX(0); 
-    }
-
-    To{
-        transform:translateX(-1*$article--height);
-    }
-}
-*/
 @keyframes narrow-txt {
   from {
     width: calc(100% - 70px);
@@ -248,16 +215,6 @@ h2 {
   text-align: center;
   padding: 0px;
   margin: 0px;
-  /*
-      &__btn{
-          @include tablet{
-              height: $header-desktop-height;
-              width: 25%;
-              border-radius: 15px;
-          }
-      }
-
-   */
 }
 @media screen and (min-width: 801px) {
   .header {
@@ -295,7 +252,6 @@ h2 {
     width: auto;
     position: absolute;
     top: 20px;
-    /*left: 50%*/
   }
 }
 .header__location {
@@ -363,7 +319,6 @@ h2 {
 
 .fonctionnement {
   background: #fff;
-  width: auto;
   padding-bottom: 20px;
   margin: 0px 15px 0px 15px;
 }
@@ -373,10 +328,6 @@ h2 {
     flex-wrap: wrap;
     justify-content: space-around;
   }
-}
-
-main {
-  padding: 20px 15px 20px 15px;
 }
 
 .footer {
@@ -442,66 +393,6 @@ main {
   }
 }
 
-/*
-
-.footer{
-    background: $colour-footer;    
-    width: 100%;
-    color:$colour-white;
-    font-weight: normal;        
-
-    &__content{
-        margin-left: $marginH;
-        @include top-spacing-marginV;
-        @include bottom-spacing-marginV;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        @include tablet{
-            margin: 0px;
-        }
-            &__logo{
-                display: flex;
-                width: auto;
-                    @include tablet{
-                    transform: scale(2.2);
-                    padding-bottom: $marginV*0.5;
-                    padding-top: $marginV*0.5;            
-                    }
-            }
-    & i{
-        margin-right: 10px;
-        width:$marginH ;
-        height: $marginH ;
-            }    
-    &__ul{
-        display: flex;
-        flex-direction: column;
-        margin: 0px;
-        padding: 0px;
-            @include tablet{
-                flex-direction: row;
-                flex-wrap: wrap;
-                width: 100%;
-                justify-content: space-between;
-                }
-                            &__li{
-
-                                    margin: 0px 0px ($marginV*0.5) 0px; 
-                                    list-style-type: none; 
-                                        @include tablet{
-                                            display: flex;
-                                            width: 50%;
-                                            justify-content: center;
-                                            transform: scale(1.5);
-                                            padding-bottom: $marginV;
-                                            }    
-
-                                }
-            }
-        }        
-}
-*/
 .spinner {
   position: absolute;
   top: 0px;
@@ -539,23 +430,10 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  /*
-  width: 100px;
-  height: 100px;
-  top: 50%;
-  left:50%;
-  right:50%;
-  bottom: 50%; 
-  margin: auto;*/
 }
 .spinner__loading__center {
   font-size: 100px;
   color: #9356DC;
-  /*
-         @include mobile{
-             font-size: 90px;
-         }
-    */
 }
 @media screen and (min-width: 801px) {
   .spinner__loading__center {
@@ -646,9 +524,6 @@ main {
   .menu__photo__nom__h2 {
     margin-right: 60px;
   }
-}
-.menu__main {
-  /*menu__main__menu__section__course__h3*/
 }
 .menu__main__btncontainer {
   display: flex;
@@ -759,7 +634,6 @@ main {
   text-overflow: ellipsis;
   animation: widen-txt 500ms 0s ease-in-out forwards;
   margin-left: 15px;
-  /*pourquoi ça ne marche pas?*/
 }
 .menu__main__menu__section__article__txt__h4 {
   overflow: hidden;
@@ -798,6 +672,10 @@ main {
   width: 70px;
   font-size: 2rem;
   border-radius: 0px 15px 15px 0px;
+}
+
+main {
+  padding: 20px 15px 20px 15px;
 }
 
 .restos {
@@ -918,12 +796,6 @@ main {
   opacity: 1;
   z-index: 2;
   transform: scaleY(0);
-  /*
-  animation-name: like--full;
-  animation-duration:  400ms;                                               
-  animation-play-state: paused;
-  animation-fill-mode: forwards;
-  */
 }
 
 .btn {
@@ -998,7 +870,6 @@ main {
   left: -13px;
   margin: 0px;
   background: #9356DC;
-  /*voir mixin puce plus bas*/
 }
 .btn-fonctionnement__icon {
   color: #CECECE;

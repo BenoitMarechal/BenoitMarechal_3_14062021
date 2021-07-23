@@ -66,7 +66,7 @@
             justify-content: center;            
         }
 
-    /*menu__main__menu__section__course__h3*/
+    
         &__menu{
             @include tablet{
                 display: flex;
@@ -127,17 +127,17 @@
                                                                
                         
                             &:hover > &__end{
-                             //   animation-direction: normal;
+                             
                                 animation: translate-left 0.8*$trans-menu-time 0s ease-in-out 1 forwards;
                                 i{
-                                animation: spinner--rotation 0.8*$trans-menu-time /*0s*/ 0.25*$trans-menu-time ease-in-out 1 forwards;
+                                animation: spinner--rotation 0.8*$trans-menu-time 0.25*$trans-menu-time ease-in-out 1 forwards;
                                 } 
                             }
                             
                             &:hover{
                                 .menu__main__menu__section__article__txt{
                                     animation: narrow-txt 0.8*$trans-menu-time 0s ease-in-out 1 forwards;
-                               //  animation-direction: reverse;
+                               
 
                                 }
                             }
@@ -147,15 +147,14 @@
                          &__txt{
                             display: flex;
                             flex-wrap: wrap;
-                        //    border: 1px solid blue;                                    
+                                                           
                            justify-content: flex-start;
                             align-items: center;
                             width: calc(100% - 145px);
                             @include ellipsis;
                             animation: widen-txt $trans-menu-time 0s ease-in-out forwards;
                             @include left-spacing-marginH;
-                         /*pourquoi ça ne marche pas?*/
-                       // animation: narrow-txt $trans-menu-time 0s ease-in-out reverse forwards;
+                         
                            
                             &__h4{
                             @include ellipsis;

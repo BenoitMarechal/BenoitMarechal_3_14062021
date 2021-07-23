@@ -40,7 +40,7 @@
 @keyframes like--full {
   0% {    
    transform: scaleY(0);
-   /*transform-origin: bottom;*/
+   
     opacity: 1;
     
   }

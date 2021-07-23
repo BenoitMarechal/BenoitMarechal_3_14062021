@@ -38,37 +38,11 @@
         justify-content: center;
         align-items: center;
 
-        /*
-        width: 100px;
-        height: 100px;
-        top: 50%;
-        left:50%;
-        right:50%;
-        bottom: 50%; 
-        margin: auto;*/
+      
         
         &__center{
             font-size: 100px;
-            color: $colour-primary;
-           // animation: none;            
-        //    position: absolute;
-        //    top: 50%;
-        //    left:50%;
-         //   right:50%;
-        //    bottom: 50%; 
-    //    display: flex;
-    //    justify-content: center;
-    //    align-items: center;
-     ///   width: auto;
-      //  z-index: 12;
-    
-     //  height: auto;
-     //   border :1px solid blue;
-     /*
-            @include mobile{
-                font-size: 90px;
-            }
-       */ 
+            color: $colour-primary;      
        
        @include tablet{
            font-size: 150px;
@@ -76,11 +50,7 @@
         }
 
         &__rotator{  
-            position: absolute;
-        //    top: 50%;
-        //    left:50%;
-        //    right:50%;
-        //    bottom: 50%; 
+        position: absolute;       
         display: flex;
         justify-content: center;
         align-items: center;
